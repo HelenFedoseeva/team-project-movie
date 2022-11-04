@@ -115,6 +115,61 @@ section {
   margin: -1px;
 }
 
+.btn {
+  border: 1px solid #FFFFFF;
+  border-radius: 5px;
+  background-color: transparent;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+  display: inline-block;
+  padding: 13px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #FFFFFF;
+}
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .btn {
+    width: 129.53px;
+    height: 42px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  .btn {
+    width: 152px;
+    height: 44px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .btn {
+    width: 148px;
+    height: 42px;
+  }
+}
+
+.navigation {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .navigation-item {
+    margin-left: 20px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  .navigation-item {
+    margin-left: 32px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .navigation-item {
+    margin-left: 16px;
+  }
+}
+
 ul.pagination {
   font-size: 18px;
   line-height: 36px;
