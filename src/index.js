@@ -2,6 +2,9 @@ import { FetchMovie } from './js/fetch';
 import { fechMuviQueri } from './js/fetch';
 // import { API_KEY, URL } from './js/fetch';
 import './js/open-modal';
+import './js/renderPagination';
+
+
 
 const form = document.querySelector('form')
 let page = 1;
@@ -24,3 +27,4 @@ async function onSubmitForm(e) {
     console.log('query', query)
     
 }
+

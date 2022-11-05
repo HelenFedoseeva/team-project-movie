@@ -1,8 +1,10 @@
 ul.pagination {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 46px;
     font-size: 18px;
     line-height: 36px;
-    display: table;
-    margin: 0 auto;
     padding: 0;
     list-style: none;
     -webkit-user-select: none;
