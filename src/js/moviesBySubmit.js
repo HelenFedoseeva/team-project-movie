@@ -1,37 +1,38 @@
-import { FetchMovie } from './js/fetch';
-import { fechMuviQueri } from './js/fetch';
-import { renderCards } from './js/render-cards';
-// import { API_KEY, URL } from './js/fetch';
-import './js/open-modal';
-
-
-
-import './js/renderPagination';
-import './js/adding-watched-movies';
+import { fechMuviQueri } from './fetch';
+import { renderCards } from './render-cards';
+import './renderPagination';
+import { currentPaginationPage, rendernPagination } from './renderPagination';
 
 const form = document.querySelector('form');
 const movies_list = document.querySelector('.gallery');
-let currentPage = 1;
+let currentPage = currentPaginationPage;
 let totalResults = null;
 let numberPerPage = null;
 let totalPages = null;
+let thisQuery = '';
 
 form.addEventListener('submit', onSubmitForm);
 async function onSubmitForm(e) {
   e.preventDefault();
   clearContent();
-  currentPage = 1;
-  const query = e.target.elements.input.value.trim();
+  thisQuery = e.target.elements.input.value.trim();
+  fetchMovie(thisQuery);
+}
+
+export async function fetchMovie(query) {
+  clearContent();
+  if (thisQuery === '') {
+    return;
+  }
   try {
-    const response = await fechMuviQueri(query, currentPage);
+    const response = await fechMuviQueri(query, currentPaginationPage);
     const fetchData = response.results;
     totalResults = response.total_results;
     numberPerPage = response.results.length;
     totalPages = response.total_pages;
-    console.log(totalPages);
-    console.log(fetchData);
 
     renderCards(fetchData, movies_list);
+    rendernPagination(totalResults, query);
   } catch (error) {
     console.log(error);
   }
@@ -39,8 +40,6 @@ async function onSubmitForm(e) {
   //     return console.log('The search string cannot be empty. Please specify your search query')
   // }
 }
-
 function clearContent() {
   movies_list.innerHTML = '';
 }
-import './js/moviesBySubmit';

@@ -29,7 +29,7 @@ function createCards(movies) {
 
 export function renderCards(data, querySelector) {
   querySelector.insertAdjacentHTML('beforeend', createCards(data));
-  console.log(data);
+  // console.log(data);
 }
 
 // renderCards();
