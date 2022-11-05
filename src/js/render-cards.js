@@ -15,11 +15,13 @@ function createCards() {
       ({ poster_path, title, release_date }) =>
         `<li class="movie-card">
       <img src="${IMAGE_URL}${poster_path}" alt="${title} class="movie-card-img""/>
+      <div class="movie-info">
       <p class="movie-title">${title}</p>
       <p class="film-cards__title">Жанры когда будут| ${release_date.slice(
         0,
         4
-      )}</p>
+      )}</p> 
+      </div>
     </li>`
     )
     .join('');
