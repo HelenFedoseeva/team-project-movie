@@ -4,6 +4,7 @@ import { renderCards } from './js/render-cards';
 // import { API_KEY, URL } from './js/fetch';
 import './js/open-modal';
 import './js/renderPagination';
+import './js/adding-watched-movies';
 
 const form = document.querySelector('form');
 const movies_list = document.querySelector('.gallery');
