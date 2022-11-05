@@ -1,0 +1,33 @@
+.gallery {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: -15px;
+}
+
+.movie-card {
+  background-color: #fff;
+  box-shadow: 2px 2px 2px 1px rgb(0 0 0 / 20%);
+
+  position: relative;
+  text-decoration: none;
+  $primary-text-color: #212121;
+  min-width: 280px;
+  min-height: 443px;
+  margin: 15px;
+  border-radius: 5px;
+
+  flex-basis: calc((100% - 2 * 15px) / 1);
+
+  @media screen and (min-width: 768px) {
+    min-width: 293px;
+    min-height: 440px;
+    flex-basis: calc((100% - 4 * 15px) / 2);
+  }
+
+  @media screen and (min-width: 1024px) {
+    min-width: 274px;
+    flex-basis: calc((100% - 6 * 15px) / 3);
+  }
+}
