@@ -4,10 +4,10 @@ import { renderCards } from './js/render-cards';
 // import { API_KEY, URL } from './js/fetch';
 import './js/open-modal';
 
-
-
 import './js/renderPagination';
 import './js/adding-watched-movies';
+import './js/render-cards';
+import './js/button-back';
 
 const form = document.querySelector('form');
 const movies_list = document.querySelector('.gallery');

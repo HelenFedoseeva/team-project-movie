@@ -1,15 +1,14 @@
-// import { movies } from './test-api';
+import fechMuviTrend from './fetch';
 
-// const cardListEl = document.querySelector('.gallery');
+const cardListEl = document.querySelector('.gallery');
 const IMAGE_URL = 'https://image.tmdb.org/t/p/w500';
 
-/* fechCards().then(resp => {
-  console.log(resp);
-  renderCards(resp);
-}); */
+fechMuviTrend().then(resp => {
+  renderCards(resp, cardListEl);
+});
 
 function createCards(movies) {
-  const results = movies;
+  const { results } = movies;
   return results
     .map(
       ({ poster_path, title, release_date }) =>
@@ -28,8 +27,6 @@ function createCards(movies) {
 }
 
 export function renderCards(data, querySelector) {
-  querySelector.insertAdjacentHTML('beforeend', createCards(data));
-  // console.log(data);
+  /* querySelector.insertAdjacentHTML('beforeend', createCards(data)); */
+  querySelector.innerHTML = createCards(data);
 }
-
-// renderCards();
