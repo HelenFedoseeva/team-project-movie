@@ -6,6 +6,8 @@ const backdropRef = document.querySelector('.backdrop');
 
 filmCardsRef.addEventListener('click', onFilmCardsClick);
 
+export let movie = null;
+
 function onFilmCardsClick(e) {
   e.preventDefault();
 
@@ -13,7 +15,7 @@ function onFilmCardsClick(e) {
     const movieId = e.target.dataset.id;
 
     backdropRef.classList.remove('is-hidden');
-    const movie = fetchMovieById(movieId);
+    movie = fetchMovieById(movieId);
     renderCard(movie);
   }
 }
