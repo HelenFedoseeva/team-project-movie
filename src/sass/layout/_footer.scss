@@ -1,0 +1,196 @@
+.footer {
+    padding-top: 28px;
+    padding-bottom: 29px;
+    background-color: #F7F7F7;
+
+
+    @media screen and (min-width: 768px) {
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+}
+
+.footer-wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 36px;
+    padding-right: 48px;
+    margin: 0 auto;
+
+
+
+    @media screen and (min-width: 768px) {
+        padding: 0;
+    }
+}
+
+.footer-content {
+    min-width: 236px;
+    font-size: 14px;
+    line-height: 1.14;
+    text-align: center;
+    color: #545454;
+
+    @media screen and (min-width: 768px) {
+        min-width: 480px;
+        font-size: 16px;
+        line-height: 1.18;
+
+
+        & br {
+            display: none;
+        }
+    }
+}
+
+.footer-wrap__icon {
+    color: var(--secondary_color);
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+.team-modal {
+    padding: 0;
+    margin-top: 10px;
+    background: transparent;
+    color: #545454;
+    font-size: 14px;
+    line-height: 1.14;
+    border: 0px solid #F7F7F7;
+
+    cursor: pointer;
+
+    @media screen and (min-width: 768px) {
+        margin-top: 0;
+        font-size: 16px;
+        line-height: 1.18;
+    }
+
+    & span {
+        text-decoration: underline;
+        transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    & span:hover,
+    & span:focus {
+        color: #ff6b08;
+    }
+}
+
+.heart-icon {
+    fill: currentColor;
+    animation: heartbeat 1s infinite;
+}
+
+@keyframes heartbeat {
+    0% {
+        transform: scale(1.10);
+    }
+
+    30% {
+        transform: scale(1.4);
+    }
+
+    60% {
+        transform: scale(1.9);
+    }
+}
+.footer {
+    padding-top: 28px;
+    padding-bottom: 29px;
+    background-color: #F7F7F7;
+
+
+    @media screen and (min-width: 768px) {
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+}
+
+.footer-wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 36px;
+    padding-right: 48px;
+    margin: 0 auto;
+
+
+
+    @media screen and (min-width: 768px) {
+        padding: 0;
+    }
+}
+
+.footer-content {
+    min-width: 236px;
+    font-size: 14px;
+    line-height: 1.14;
+    text-align: center;
+    color: #545454;
+
+    @media screen and (min-width: 768px) {
+        min-width: 480px;
+        font-size: 16px;
+        line-height: 1.18;
+
+
+        & br {
+            display: none;
+        }
+    }
+}
+
+.footer-wrap__icon {
+    color: #ff6b08;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+.team-modal {
+    padding: 0;
+    margin-top: 10px;
+    background: transparent;
+    color: #545454;
+    font-size: 14px;
+    line-height: 1.14;
+    border: 0px solid #F7F7F7;
+
+    cursor: pointer;
+
+    @media screen and (min-width: 768px) {
+        margin-top: 0;
+        font-size: 16px;
+        line-height: 1.18;
+    }
+
+    & span {
+        text-decoration: underline;
+        transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    & span:hover,
+    & span:focus {
+        color: #ff6b08;
+    }
+}
+
+.heart-icon {
+    fill: currentColor;
+    animation: heartbeat 1s infinite;
+}
+
+@keyframes heartbeat {
+    0% {
+        transform: scale(1.10);
+    }
+
+    30% {
+        transform: scale(1.4);
+    }
+
+    60% {
+        transform: scale(1.9);
+    }
+}
