@@ -1,7 +1,7 @@
 // import { renderCard } from './render-card';
 // import {fetchMovieById} from 'fetchMoviesById'
 
-const filmCardsRef = document.querySelector('.film-cards');
+const filmCardsRef = document.querySelector('.gallery');
 const backdropRef = document.querySelector('.backdrop');
 
 filmCardsRef.addEventListener('click', onFilmCardsClick);
