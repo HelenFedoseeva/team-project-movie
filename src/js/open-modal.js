@@ -11,6 +11,7 @@ function onFilmCardsClick(e) {
 
   if (e.target.nodeName === 'IMG') {
     const movieId = e.target.dataset.id;
+
     backdropRef.classList.remove('is-hidden');
     const movie = fetchMovieById(movieId);
     renderCard(movie);
