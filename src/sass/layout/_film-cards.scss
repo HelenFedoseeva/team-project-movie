@@ -52,6 +52,7 @@
     @include font($lh: 16px);
   }
   .movie-title {
+    text-transform: uppercase;
     color: $primary-text-color;
     @include font($lh: 16px);
   }
