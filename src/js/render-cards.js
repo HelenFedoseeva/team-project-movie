@@ -1,6 +1,6 @@
-import { movies } from './test-api';
+// import { movies } from './test-api';
 
-const cardListEl = document.querySelector('.gallery');
+// const cardListEl = document.querySelector('.gallery');
 const IMAGE_URL = 'https://image.tmdb.org/t/p/w500';
 
 /* fechCards().then(resp => {
@@ -8,8 +8,8 @@ const IMAGE_URL = 'https://image.tmdb.org/t/p/w500';
   renderCards(resp);
 }); */
 
-function createCards() {
-  const { results } = movies;
+function createCards(movies) {
+  const results = movies;
   return results
     .map(
       ({ poster_path, title, release_date }) =>
@@ -27,8 +27,9 @@ function createCards() {
     .join('');
 }
 
-function renderCards() {
-  cardListEl.insertAdjacentHTML('beforeend', createCards());
+export function renderCards(data, querySelector) {
+  querySelector.insertAdjacentHTML('beforeend', createCards(data));
+  console.log(data);
 }
 
-renderCards();
+// renderCards();
