@@ -65,7 +65,8 @@
     .header-library {
         width: 100%;
         background-color: #640606;
-        background-image: url('/src/images/bacgroundP2@1x-mobile.jpg');
+        background-image:linear-gradient(rgba(0, 0, 0, 0.56), rgba(0, 0, 0, 0.56)),
+         url('/src/images/bacgroundP2@1x-mobile.jpg');
         background-repeat: no-repeat;
         background-size: cover;
     }
@@ -74,7 +75,7 @@
     (min-resolution: 192dpi),
     (min-resolution: 2dppx) {
         .header-library {
-            background-image:
+            background-image: linear-gradient(rgba(0, 0, 0, 0.56), rgba(0, 0, 0, 0.56)),
                 url('/src/images/bacgroundP2@2x-mobile.jpg');
         }
     }
@@ -110,7 +111,8 @@
     .header-library {
         width: 100%;
         background-color: #640606;
-        background-image: url('/src/images/bacgroundP2@1x-tablet.jpg');
+        background-image: linear-gradient(rgba(0, 0, 0, 0.56), rgba(0, 0, 0, 0.56)),
+         url('/src/images/bacgroundP2@1x-tablet.jpg');
         background-repeat: no-repeat;
         background-size: cover;
     }
@@ -119,7 +121,7 @@
     (min-resolution: 192dpi),
     (min-resolution: 2dppx) {
         .header-library {
-            background-image:
+            background-image: linear-gradient(rgba(0, 0, 0, 0.56), rgba(0, 0, 0, 0.56)),
                 url('/src/images/bacgroundP2@2x-tablet.jpg');
         }
     }
@@ -146,7 +148,8 @@
     .header-library {
         width: 100%;
         background-color: #640606;
-        background-image: url('/src/images/bacgroundP2@1x-desctop.jpg');
+        background-image:linear-gradient(rgba(0, 0, 0, 0.56), rgba(0, 0, 0, 0.56)),
+         url('/src/images/bacgroundP2@1x-desctop.jpg');
         background-repeat: no-repeat;
         background-size: cover;
     }
@@ -155,7 +158,7 @@
     (min-resolution: 192dpi),
     (min-resolution: 2dppx) {
         .header-library {
-            background-image:
+            background-image: linear-gradient(rgba(0, 0, 0, 0.56), rgba(0, 0, 0, 0.56)),
                 url('/src/images/bacgroundP2@2x-desctop.jpg');
         }
     }
