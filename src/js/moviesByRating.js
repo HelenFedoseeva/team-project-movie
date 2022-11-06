@@ -11,8 +11,6 @@ async function fetchMovieByRating() {
   try {
     const response = await fechMuviTrend(currentPage);
     totalResults = response.total_results;
-    numberPerPage = response.results.length;
-    totalPages = response.total_pages;
     console.log(totalResults);
     renderCards(response, movies_list);
   } catch (error) {

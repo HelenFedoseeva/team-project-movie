@@ -5,5 +5,4 @@ import { renderCards } from './js/render-cards';
 import './js/open-modal';
 import './js/moviesByRating';
 import './js/moviesBySubmit';
-import './js/renderPagination';
 import './js/adding-watched-movies';

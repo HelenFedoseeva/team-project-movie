@@ -23,7 +23,6 @@ async function fetchMoviebyQueri(query) {
   try {
     const response = await fechMuviQueri(query, currentPage);
     totalResults = response.total_results;
-    numberPerPage = response.results.length;
     totalPages = response.total_pages;
 
     renderCards(response, movies_list);
