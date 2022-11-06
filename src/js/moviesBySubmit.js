@@ -11,9 +11,11 @@ let thisQuery = '';
 form.addEventListener('submit', onSubmitForm);
 async function onSubmitForm(e) {
   e.preventDefault();
-  clearContent();
   currentPage = 1;
   thisQuery = e.target.elements.input.value.trim();
+  if (thisQuery === '') {
+    return;
+  }
   fetchMoviebyQueri(thisQuery);
 }
 async function fetchMoviebyQueri(query) {
