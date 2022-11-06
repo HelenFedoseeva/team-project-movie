@@ -1,8 +1,8 @@
 // import { movie } from './open-modal';
 
-const btns = document.querySelector('.btns-box');
+// const btns = document.querySelector('.btns-box');
 
-btns.addEventListener('click', onBtnsClick);
+// btns.addEventListener('click', onBtnsClick);
 
 const watched = [];
 const queue = [];
