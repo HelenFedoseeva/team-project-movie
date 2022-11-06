@@ -26,12 +26,11 @@ export async function fetchMovie(query) {
   }
   try {
     const response = await fechMuviQueri(query, currentPaginationPage);
-    const fetchData = response.results;
     totalResults = response.total_results;
     numberPerPage = response.results.length;
     totalPages = response.total_pages;
 
-    renderCards(fetchData, movies_list);
+    renderCards(response, movies_list);
     rendernPagination(totalResults, query);
   } catch (error) {
     console.log(error);
