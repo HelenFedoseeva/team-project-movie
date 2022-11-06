@@ -1,6 +1,6 @@
 import './pagination';
 import './moviesBySubmit';
-import { fetchMovie } from './moviesBySubmit';
+// import { fetchMovie } from './moviesBySubmit';
 
 //необходимые переменные
 export let currentPaginationPage = 1;
