@@ -1,4 +1,4 @@
-import { movie } from './open-modal';
+// import { movie } from './open-modal';
 
 const btns = document.querySelector('.btns-box');
 
