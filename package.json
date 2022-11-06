@@ -2,10 +2,10 @@
   "name": "project-movie",
   "version": "2.0.0",
   "description": "",
-  "homepage": "https://HelenFedoseeva.github.io/project-movie",
+  "homepage": "https://HelenFedoseeva.github.io/team-project-movie",
   "scripts": {
     "start": "parcel src/*.html",
-    "build": "parcel build src/*.html --public-url /project-movie/"
+    "build": "parcel build src/*.html --public-url /team-project-movie/"
   },
   "repository": {
     "type": "git",
@@ -25,9 +25,11 @@
   },
   "devDependencies": {
     "@parcel/transformer-sass": "^2.6.0",
+    "buffer": "^6.0.3",
     "parcel": "^2.6.0",
     "parcel-reporter-clean-dist": "^1.0.4",
-    "posthtml-include": "^1.7.4"
+    "posthtml-include": "^1.7.4",
+    "process": "^0.11.10"
   },
   "browserslist": "> 0.5%, last 2 versions, not dead"
 }
