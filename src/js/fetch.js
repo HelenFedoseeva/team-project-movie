@@ -14,8 +14,9 @@ async function fechMuviQueri(query, page) {
     .then(response => response.data);
 }
 
-export default async function fechMuviTrend() {
+export default async function fechMuviTrend(page) {
+  const PAGE = `&page=${page}`;
   return await axios
-    .get(`${URL_TREND}?${API_KEY}`)
+    .get(`${URL_TREND}?${API_KEY}${PAGE}`)
     .then(response => response.data);
 }
