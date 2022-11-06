@@ -1,11 +1,9 @@
 const IMAGE_URL = 'https://image.tmdb.org/t/p/w500';
-const modalWrapperRef = document.querySelector('.wrapper');
-const btnsRef = document.querySelector('.btns-box');
+const modalRef = document.querySelector('.modal');
 
 export { modalCardRender };
 
 function modalCardRender({
-  id,
   poster_path,
   title,
   vote_average,
@@ -16,8 +14,8 @@ function modalCardRender({
   overview,
 }) {
   const movieGenres = genres.map(genre => genre.name).join(',');
-  btnsRef.setAttribute('data-id', `${id}`);
   const markup = `
+  <div class="wrapper">
     <div class="image">
       <img src="${IMAGE_URL}${poster_path}" alt="${title}" />
     </div>
@@ -59,8 +57,17 @@ function modalCardRender({
 
    <p class="text">About</p>
    <p class="paragraph">${overview}</p>
-  
+   <div class="btns-box">
+   <button type="button" class="btns-box__btn is-active" data-add="watched">
+     add to Watched
+   </button>
+   <button type="button" class="btns-box__btn" data-add="queue">
+     add to queue
+   </button>
  </div>
+ </div>
+ 
+    </div>
 `;
-  modalWrapperRef.insertAdjacentHTML('beforeend', markup);
+  modalRef.insertAdjacentHTML('beforeend', markup);
 }
