@@ -12,14 +12,12 @@ function onEscTap(e) {
     if (e.key === "Escape") {
         closeModal()
     };
-    return;
 };
 
 function onClickCloseBtnOrOutside(e) {
     if (e.target === modalCloseBtn || e.target !== modalRef) {
         closeModal();
     } 
-    return;
 };
 
 function closeModal() {
@@ -27,6 +25,7 @@ function closeModal() {
     backdropRef.classList.toggle("is-hidden");
     document.removeEventListener("keydown", onEscTap);
     backdropRef.removeEventListener("click", onClickCloseBtnOrOutside);
+    const wrapper = document.querySelector(".wrapper");
+    wrapper.remove()
+};
 
-    return;
-}
