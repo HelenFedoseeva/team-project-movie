@@ -1,12 +1,10 @@
-// import { renderCard } from './render-card';
-// import {fetchMovieById} from 'fetchMoviesById'
+import { modalCardRender } from './modalCardRender';
+import { getMovie } from './movieById';
 
 const filmCardsRef = document.querySelector('.gallery');
 const backdropRef = document.querySelector('.backdrop');
 
 filmCardsRef.addEventListener('click', onFilmCardsClick);
-
-export let movie = null;
 
 function onFilmCardsClick(e) {
   e.preventDefault();
@@ -14,8 +12,14 @@ function onFilmCardsClick(e) {
   if (e.target.nodeName === 'IMG') {
     const movieId = e.target.dataset.id;
 
-    backdropRef.classList.remove('is-hidden');
-    movie = fetchMovieById(movieId);
-    renderCard(movie);
+    openModal(movieId);
   }
+}
+
+async function openModal(movieId) {
+  backdropRef.classList.remove('is-hidden');
+
+  const movie = await getMovie(movieId);
+
+  modalCardRender(movie.data);
 }
