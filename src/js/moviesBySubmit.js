@@ -1,5 +1,6 @@
 import { fechMuviQueri } from './fetch';
 import { renderCards } from './render-cards';
+import './pagination';
 
 const form = document.querySelector('form');
 const movies_list = document.querySelector('.gallery');
