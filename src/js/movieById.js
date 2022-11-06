@@ -5,7 +5,8 @@ const BASE_URL_MOVIE = 'https://api.themoviedb.org/3/movie/';
 
 async function getMovie(id) {
   try {
-    return (response = await axios.get(`${BASE_URL_MOVIE}${id}?${API_KEY}`));
+    const response = await axios.get(`${BASE_URL_MOVIE}${id}?${API_KEY}`);
+    return response;
   } catch (error) {
     console.error(error);
   }
