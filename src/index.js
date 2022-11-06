@@ -6,4 +6,3 @@ import './js/open-modal';
 import './js/moviesByRating';
 import './js/moviesBySubmit';
 import './js/adding-watched-movies';
-import './js/close-modal'
