@@ -1,5 +1,6 @@
 import { fechMuviQueri } from './fetch';
 import { renderCards } from './render-cards';
+import './pagination';
 
 const form = document.querySelector('form');
 const movies_list = document.querySelector('.gallery');
@@ -23,8 +24,6 @@ async function fetchMoviebyQueri(query) {
   try {
     const response = await fechMuviQueri(query, currentPage);
     totalResults = response.total_results;
-    numberPerPage = response.results.length;
-    totalPages = response.total_pages;
 
     renderCards(response, movies_list);
   } catch (error) {

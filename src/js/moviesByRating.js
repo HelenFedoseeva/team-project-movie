@@ -1,5 +1,6 @@
 import { renderCards } from './render-cards';
 import fechMuviTrend from './fetch';
+import './pagination';
 
 const movies_list = document.querySelector('.gallery');
 let currentPage = 1;
@@ -11,9 +12,6 @@ async function fetchMovieByRating() {
   try {
     const response = await fechMuviTrend(currentPage);
     totalResults = response.total_results;
-    numberPerPage = response.results.length;
-    totalPages = response.total_pages;
-    console.log(totalResults);
     renderCards(response, movies_list);
   } catch (error) {
     console.log(error);
