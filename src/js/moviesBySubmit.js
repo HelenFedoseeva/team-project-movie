@@ -16,45 +16,47 @@ async function onSubmitForm(e) {
   e.preventDefault();
   currentPage = 1;
   thisQuery = e.target.elements.input.value.trim();
-  if (!thisQuery) {
+  
+  if (!thisQuery || totalResults ===0) {
     textOutput.classList.remove('hidden')
     setTimeout(() => {
       textOutput.classList.add('hidden')
-     },3000)
+    }, 3000)
     return;
   }
-  fetchMoviebyQueri(thisQuery);
-}
-async function fetchMoviebyQueri(query) {
-  clearContent();
-  if (thisQuery=== '') {
-    return;
+    fetchMoviebyQueri(thisQuery);
   }
-  try {
-    const response = await fechMuviQueri(query, currentPage);
-    totalResults = response.total_results;
+  async function fetchMoviebyQueri(query) {
+    clearContent();
+    if (thisQuery === '') {
+      return;
+    }
+    try {
+      const response = await fechMuviQueri(query, currentPage);
+      totalResults = response.total_results;
+console.log('total',totalResults)
+      renderCards(response, movies_list);
+    } catch (error) {
+      console.log(error);
+    }
+    // if (!query) {
+    //     return console.log('The search string cannot be empty. Please specify your search query')
+    // }
 
-    renderCards(response, movies_list);
-  } catch (error) {
-    console.log(error);
+    $(`#pagination`).pagination({
+      total: totalResults,
+      current: currentPage,
+      length: 20,
+      size: 2,
+      prev: '&lt;',
+      next: '&gt;',
+      click: async function (e) {
+        currentPage = e.current;
+        await fetchMoviebyQueri(thisQuery);
+      },
+    });
   }
-  // if (!query) {
-  //     return console.log('The search string cannot be empty. Please specify your search query')
-  // }
+  function clearContent() {
+    movies_list.innerHTML = '';
+  }
 
-  $(`#pagination`).pagination({
-    total: totalResults,
-    current: currentPage,
-    length: 20,
-    size: 2,
-    prev: '&lt;',
-    next: '&gt;',
-    click: async function (e) {
-      currentPage = e.current;
-      await fetchMoviebyQueri(thisQuery);
-    },
-  });
-}
-function clearContent() {
-  movies_list.innerHTML = '';
-}
