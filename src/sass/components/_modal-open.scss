@@ -94,10 +94,12 @@
 }
 
 .image {
+  position: relative;
   width: 240px;
   height: 357px;
   background-color: gray;
 
+  overflow: hidden;
   @media screen and (max-width: 767px) {
     margin-bottom: 20px;
   }
@@ -111,6 +113,12 @@
     width: 375px;
     height: 478px;
   }
+}
+
+.poster {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 .wrapper__title {
@@ -189,7 +197,6 @@
 
 .btns-box {
   display: flex;
-  justify-content: end;
 }
 
 .btns-box__btn {
