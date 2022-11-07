@@ -24,7 +24,9 @@ async function onSubmitForm(e) {
     }, 3000)
     return;
   }
-    fetchMoviebyQueri(thisQuery);
+     loaderShow();
+  fetchMoviebyQueri(thisQuery);
+  setTimeout(loaderHide, 250);
   }
   async function fetchMoviebyQueri(query) {
     clearContent();
