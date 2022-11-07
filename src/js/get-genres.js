@@ -1,24 +1,94 @@
-async function getGenresList() {
-  const genresList = await fetch(
-    'https://api.themoviedb.org/3/genre/movie/list?api_key=341a3443d9168179889e844c5b12f774'
-  ).then(resp => resp.json());
-  console.log(genresList);
-  return genresList;
-}
+const genres = [
+  {
+    id: 28,
+    name: 'Action',
+  },
+  {
+    id: 12,
+    name: 'Adventure',
+  },
+  {
+    id: 16,
+    name: 'Animation',
+  },
+  {
+    id: 35,
+    name: 'Comedy',
+  },
+  {
+    id: 80,
+    name: 'Crime',
+  },
+  {
+    id: 99,
+    name: 'Documentary',
+  },
+  {
+    id: 18,
+    name: 'Drama',
+  },
+  {
+    id: 10751,
+    name: 'Family',
+  },
+  {
+    id: 14,
+    name: 'Fantasy',
+  },
+  {
+    id: 36,
+    name: 'History',
+  },
+  {
+    id: 27,
+    name: 'Horror',
+  },
+  {
+    id: 10402,
+    name: 'Music',
+  },
+  {
+    id: 9648,
+    name: 'Mystery',
+  },
+  {
+    id: 10749,
+    name: 'Romance',
+  },
+  {
+    id: 878,
+    name: 'Science Fiction',
+  },
+  {
+    id: 10770,
+    name: 'TV Movie',
+  },
+  {
+    id: 53,
+    name: 'Thriller',
+  },
+  {
+    id: 10752,
+    name: 'War',
+  },
+  {
+    id: 37,
+    name: 'Western',
+  },
+];
 
-export default async function getGenres(genreArr) {
-  let genreS = [];
-  const genresList = await getGenresList();
+export default function getGenres(genreArr, genreList) {
+  let genre = [];
   genreArr.map(genreId => {
-    for (const g of genresList.genres) {
+    for (const g of genres) {
       if (genreId === g.id) {
-        genreS.push(g.name);
+        genre.push(g.name);
       }
     }
   });
 
-  if (genreS.length > 1) {
-    genreS.splice(2, 5, 'Other');
+  if (genre.length > 2) {
+    genre.splice(2, 5, 'Other');
   }
-  return genreS.join(',');
+  return genre.join(', ');
 }

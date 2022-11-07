@@ -7,3 +7,4 @@ import './js/moviesByRating';
 import './js/moviesBySubmit';
 import './js/adding-watched-movies';
 import './js/loader';
+import './js/button-back';
