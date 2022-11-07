@@ -29,4 +29,5 @@ function createCards(movies) {
 export function renderCards(data, querySelector) {
   /* querySelector.insertAdjacentHTML('beforeend', createCards(data)); */
   querySelector.innerHTML = createCards(data);
+
 }

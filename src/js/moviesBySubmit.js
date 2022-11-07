@@ -16,28 +16,35 @@ async function onSubmitForm(e) {
   e.preventDefault();
   currentPage = 1;
   thisQuery = e.target.elements.input.value.trim();
-  
-  if (!thisQuery || totalResults ===0) {
+  console.log(thisQuery)
+  if (!thisQuery) {
+  //
     textOutput.classList.remove('hidden')
     setTimeout(() => {
       textOutput.classList.add('hidden')
     }, 3000)
     return;
   }
+     
      loaderShow();
   fetchMoviebyQueri(thisQuery);
   setTimeout(loaderHide, 250);
   }
   async function fetchMoviebyQueri(query) {
     clearContent();
-    if (thisQuery === '') {
-      return;
-    }
+    // if (thisQuery === '') {
+    //   return;
+    // }
     try {
       const response = await fechMuviQueri(query, currentPage);
       totalResults = response.total_results;
-console.log('total',totalResults)
       renderCards(response, movies_list);
+    if (response.results.length === 0) {
+        textOutput.classList.remove('hidden')
+         setTimeout(() => {
+      textOutput.classList.add('hidden')
+    }, 3000)
+   return   }
     } catch (error) {
       console.log(error);
     }
