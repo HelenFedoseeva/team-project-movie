@@ -5,6 +5,7 @@ import './pagination';
 
 const form = document.querySelector('form');
 const movies_list = document.querySelector('.gallery');
+const textOutput = document.querySelector('.form__text')
 let currentPage = 1;
 let totalResults = null;
 let thisQuery = '';
@@ -15,16 +16,18 @@ async function onSubmitForm(e) {
   e.preventDefault();
   currentPage = 1;
   thisQuery = e.target.elements.input.value.trim();
-  if (thisQuery === '') {
+  if (!thisQuery) {
+    textOutput.classList.remove('hidden')
+    setTimeout(() => {
+      textOutput.classList.add('hidden')
+     },3000)
     return;
   }
-  loaderShow();
   fetchMoviebyQueri(thisQuery);
-  setTimeout(loaderHide, 250);
 }
 async function fetchMoviebyQueri(query) {
   clearContent();
-  if (thisQuery === '') {
+  if (thisQuery=== '') {
     return;
   }
   try {
