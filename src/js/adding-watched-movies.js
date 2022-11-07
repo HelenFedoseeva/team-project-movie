@@ -1,24 +1,40 @@
-// import { movie } from './open-modal';
+export { addListenerByBtns };
+function addListenerByBtns(movie) {
+  const btns = document.querySelector('.btns-box');
+  btns.addEventListener('click', onBtnsClick.bind(this, movie));
+}
 
-// const btns = document.querySelector('.btns-box');
-
-// btns.addEventListener('click', onBtnsClick);
-
-const watched = [];
-const queue = [];
-
-function onBtnsClick(event) {
+function onBtnsClick(movie, event) {
   if (event.target.dataset.add === 'watched') {
-    watched.push(movie);
-    const movies = JSON.stringify(watched);
-
-    localStorage.setItem('watched', movies);
+    checkLocalStorage(movie, 'watched');
   }
 
   if (event.target.dataset.add === 'queue') {
-    queue.push(movie);
-    const movies = JSON.stringify(queue);
-
-    localStorage.setItem('queue', movies);
+    checkLocalStorage(movie, 'queue');
   }
+}
+
+function checkLocalStorage(movie, key) {
+  const keyFromLocalStorage = JSON.parse(localStorage.getItem(`${key}`));
+
+  if (!keyFromLocalStorage) {
+    addLocalStorage([movie], `${key}`);
+    return;
+  }
+
+  const film = keyFromLocalStorage.find(
+    ({ data: { id } }) => movie.data.id === id
+  );
+
+  if (!film) {
+    keyFromLocalStorage.push(movie);
+    addLocalStorage(keyFromLocalStorage, `${key}`);
+  }
+
+  const button = document.querySelector(`button[data-add="${key}"]`);
+  button.textContent = `already added to ${key}`;
+}
+
+function addLocalStorage(arr, key) {
+  localStorage.setItem(`${key}`, JSON.stringify(arr));
 }
