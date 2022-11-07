@@ -8,3 +8,4 @@ import './js/moviesBySubmit';
 import './js/adding-watched-movies';
 import './js/add-to-watched';
 import './js/add-to-queque';
+import './js/loader';

@@ -1,5 +1,6 @@
 import { renderCards } from './render-cards';
 import fechMuviTrend from './fetch';
+import { loaderShow, loaderHide } from './loader';
 import './pagination';
 
 const movies_list = document.querySelector('.gallery');
@@ -25,7 +26,9 @@ async function fetchMovieByRating() {
     next: '&gt;',
     click: function (e) {
       currentPage = e.current;
+      loaderShow();
       fetchMovieByRating();
+      setTimeout(loaderHide, 250);
     },
   });
 }
@@ -34,4 +37,6 @@ function clearContent() {
   movies_list.innerHTML = '';
 }
 
+loaderShow();
 fetchMovieByRating();
+setTimeout(loaderHide(), 250);

@@ -1,5 +1,6 @@
 import { fechMuviQueri } from './fetch';
 import { renderCards } from './render-cards';
+import { loaderShow, loaderHide } from './loader';
 import './pagination';
 
 const form = document.querySelector('form');
@@ -9,6 +10,7 @@ let totalResults = null;
 let thisQuery = '';
 
 form.addEventListener('submit', onSubmitForm);
+
 async function onSubmitForm(e) {
   e.preventDefault();
   currentPage = 1;
@@ -16,7 +18,9 @@ async function onSubmitForm(e) {
   if (thisQuery === '') {
     return;
   }
+  loaderShow();
   fetchMoviebyQueri(thisQuery);
+  setTimeout(loaderHide, 250);
 }
 async function fetchMoviebyQueri(query) {
   clearContent();
