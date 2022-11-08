@@ -11,40 +11,42 @@ let totalResults = null;
 let thisQuery = '';
 
 form.addEventListener('submit', onSubmitForm);
-
+result = '';
 async function onSubmitForm(e) {
   e.preventDefault();
   currentPage = 1;
   thisQuery = e.target.elements.input.value.trim();
   console.log(thisQuery)
   if (!thisQuery) {
-  //
     textOutput.classList.remove('hidden')
     setTimeout(() => {
       textOutput.classList.add('hidden')
     }, 3000)
     return;
-  }
-     
-     loaderShow();
-  fetchMoviebyQueri(thisQuery);
+  }  
+  
+
+ fetchMoviebyQueri(thisQuery);
+  
+  loaderShow();
+  
   setTimeout(loaderHide, 250);
-  }
+}
   async function fetchMoviebyQueri(query) {
-    clearContent();
-    // if (thisQuery === '') {
-    //   return;
-    // }
+    //clearContent();
     try {
       const response = await fechMuviQueri(query, currentPage);
       totalResults = response.total_results;
-      renderCards(response, movies_list);
-    if (response.results.length === 0) {
-        textOutput.classList.remove('hidden')
-         setTimeout(() => {
+if (response.results.length === 0) {
+    textOutput.classList.remove('hidden')
+    setTimeout(() => {
       textOutput.classList.add('hidden')
     }, 3000)
-   return   }
+  return
+  }
+
+      renderCards(response, movies_list);
+   
     } catch (error) {
       console.log(error);
     }
@@ -65,6 +67,7 @@ async function onSubmitForm(e) {
       },
     });
   }
+
   function clearContent() {
     movies_list.innerHTML = '';
   }
