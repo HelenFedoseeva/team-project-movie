@@ -14,7 +14,7 @@ async function onQueueBtnClick() {
 
     try {
         const queue = JSON.parse(localStorage.getItem('queue'));
-        renderLibraryCrads(queue, galleryRef);
+        renderLibraryCrads(queue);
     }
     catch (error) {
         console.log(error);
