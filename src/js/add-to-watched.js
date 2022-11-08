@@ -8,14 +8,11 @@ watchedBtn.addEventListener('click', onWatchedBtnClick);
 
 async function onWatchedBtnClick() {
     clearContent();
-    //currentPage = 1;
+    watchedBtn.classList.add('is-active');
+    queueBtn.classList.remove('is-active');
     try {
         const watched = localStorage.getItem('watched');
         const parseWatched = JSON.parse(watched);
-        clearContent();
-        watchedBtn.classList.add('is-active');
-        queueBtn.classList.remove('is-active');
-
         renderLibraryCrads(parseWatched);
     } catch (error) {
         console.log(error);
