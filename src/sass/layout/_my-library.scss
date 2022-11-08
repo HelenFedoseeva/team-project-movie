@@ -1,5 +1,19 @@
 
-.empty-page__notification{
+
+@media screen and (max-width: 767px) {
+    .empty-page__notification{
+        font-size: 12px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .empty-page__notification {
+            font-size: 14px;
+        }
+}
+
+
+.empty-page__notification {
     font-family: Roboto;
     font-weight: 500;
     font-size: 18px;
@@ -15,19 +29,22 @@
 }
 
 @keyframes opac {
-    0% {opacity: 0}
-    100% {opacity: 1;}
+    0% {
+        opacity: 0
+    }
+
+    100% {
+        opacity: 1;
+    }
 }
 
 
-.opacity{
+.opacity {
     opacity: 0;
     position: absolute;
-   
+
 }
 
-.empty-page__img{
-    display: block;
-    height: 700px;
-    width: 100%;
+.empty-page__img {
+    margin: 0 auto;
 }
