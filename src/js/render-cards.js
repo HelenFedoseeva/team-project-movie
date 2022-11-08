@@ -12,7 +12,7 @@ function createCards(movies) {
     .map(({ poster_path, title, release_date, id, genre_ids }) => {
       const genre = getGenres(genre_ids);
       return `<li class="movie-card">
-      <img src="${IMAGE_URL}${poster_path}" alt="${title} class="movie-card-img" data-id='${id}'"/>
+      <img src="${IMAGE_URL}${poster_path}" alt="${title}" class="movie-card-img" data-id="${id}"/>
       <div class="movie-info">
       <p class="movie-title">${title}</p>
       <p class="film-cards__title movie-genres">${genre} | ${release_date.slice(
