@@ -24,32 +24,27 @@ async function onSubmitForm(e) {
     }, 3000)
     return;
   }  
-  if (response.results.length === 0) {
+  
+
+ fetchMoviebyQueri(thisQuery);
+  
+  loaderShow();
+  
+  setTimeout(loaderHide, 250);
+}
+  async function fetchMoviebyQueri(query) {
+    //clearContent();
+    try {
+      const response = await fechMuviQueri(query, currentPage);
+      totalResults = response.total_results;
+if (response.results.length === 0) {
     textOutput.classList.remove('hidden')
     setTimeout(() => {
       textOutput.classList.add('hidden')
     }, 3000)
-    return
+  return
   }
 
- fetchMoviebyQueri(thisQuery);
-  
-  
-  
-  // loaderShow();
-  
-  // setTimeout(loaderHide, 250);
-}
-
-
-  async function fetchMoviebyQueri(query) {
-    clearContent();
-    // if (thisQuery === '') {
-    //   return;
-    // }
-    try {
-      const response = await fechMuviQueri(query, currentPage);
-      totalResults = response.total_results;
       renderCards(response, movies_list);
    
     } catch (error) {
