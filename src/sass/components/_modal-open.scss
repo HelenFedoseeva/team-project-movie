@@ -9,7 +9,6 @@
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
     visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
   z-index: 1000;
-  pointer-events: none;
 }
 
 .is-hidden {
@@ -40,13 +39,13 @@
   transform: translate(-50%, -50%) scale(1);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
-  @media screen and(min-width:768px) {
+  @media screen and (min-width: 768px) {
     max-width: 704px;
     max-height: 552px;
     padding: 40px 72px 40px 36px;
     margin-top: 0;
   }
-  @media screen and(min-width:1280px) {
+  @media screen and (min-width: 1280px) {
     max-width: 806px;
     max-height: 558px;
     padding: 40px 12px;
@@ -73,17 +72,17 @@
 }
 
 .wrapper {
-  @media screen and(min-width:768px) {
+  @media screen and (min-width: 768px) {
     display: flex;
   }
 }
 
 .wrapper__text {
-  @media screen and(min-width:768px) {
+  @media screen and (min-width: 768px) {
     width: 265px;
     margin-left: 68px;
   }
-  @media screen and(min-width:1280px) {
+  @media screen and (min-width: 1280px) {
     width: 391px;
 
     margin-left: 16px;
@@ -95,23 +94,31 @@
 }
 
 .image {
+  position: relative;
   width: 240px;
   height: 357px;
   background-color: gray;
 
-  @media screen and(max-width:767px) {
+  overflow: hidden;
+  @media screen and (max-width: 767px) {
     margin-bottom: 20px;
   }
 
-  @media screen and(min-width:768px) {
+  @media screen and (min-width: 768px) {
     width: 264px;
     height: 373px;
   }
 
-  @media screen and(min-width:1280px) {
+  @media screen and (min-width: 1280px) {
     width: 375px;
     height: 478px;
   }
+}
+
+.poster {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 .wrapper__title {
@@ -121,7 +128,7 @@
   color: var(--primary_color);
   margin-bottom: 20px;
 
-  @media screen and(min-width:1280px) {
+  @media screen and (min-width: 1280px) {
     font-size: 30px;
     line-height: 1.16;
   }
@@ -133,7 +140,7 @@
     margin-right: 39px;
   }
 
-  @media screen and(min-width:768px) {
+  @media screen and (min-width: 768px) {
     &:not(:last-child) {
       margin-right: 84px;
     }
@@ -160,6 +167,10 @@
   font-weight: 500;
   font-size: 12px;
   line-height: 1.33;
+}
+
+.list_width {
+  width: 100px;
 }
 
 .list__item-text {
@@ -200,7 +211,7 @@
     margin-right: 20px;
   }
 
-  @media screen and(min-width:768px) {
+  @media screen and (min-width: 768px) {
     width: 125px;
     height: 44px;
 
@@ -209,7 +220,7 @@
     }
   }
 
-  @media screen and(min-width:1280px) {
+  @media screen and (min-width: 1280px) {
     width: 136px;
     height: 44px;
   }

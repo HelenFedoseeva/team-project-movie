@@ -2,10 +2,10 @@
   "name": "project-movie",
   "version": "2.0.0",
   "description": "",
-  "homepage": "https://HelenFedoseeva.github.io/project-movie",
+  "homepage": "https://HelenFedoseeva.github.io/team-project-movie",
   "scripts": {
     "start": "parcel src/*.html",
-    "build": "parcel build src/*.html --public-url /project-movie/"
+    "build": "parcel build src/*.html --public-url /team-project-movie/"
   },
   "repository": {
     "type": "git",

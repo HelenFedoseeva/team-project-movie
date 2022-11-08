@@ -9,8 +9,10 @@
 @import './utils/visually-hidden';
 @import './utils/mixin';
 
+@import './components/loader';
 @import './components/buttons';
 @import './components/modal-open';
+@import './components/pagination';
 
 @import './layout/home';
 @import './layout/header';
@@ -20,6 +22,3 @@
 @import'./layout/myLibrery-header';
 
 
-
-
-@import './components/pagination';

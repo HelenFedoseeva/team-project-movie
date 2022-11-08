@@ -1,30 +1,12 @@
-import { FetchMovie } from './js/fetch';
-import { fechMuviQueri } from './js/fetch';
+// import { FetchMovie } from './js/fetch';
+// import { fechMuviQueri } from './js/fetch';
+// import { renderCards } from './js/render-cards';
 // import { API_KEY, URL } from './js/fetch';
 import './js/open-modal';
-import './js/renderPagination';
-
-
-
-const form = document.querySelector('form')
-let page = 1;
-
-form.addEventListener('submit',onSubmitForm)
-async function onSubmitForm(e) {
-    e.preventDefault()
-    page = 1
-    const query = e.target.elements.input.value.trim();
-    const response = await fechMuviQueri(query,page)
-    try {
-    console.log(response)
-    }
-    catch (error) {
-        console.log(error)
-    }
-    // if (!query) {
-    //     return console.log('The search string cannot be empty. Please specify your search query')
-    // }
-    console.log('query', query)
-    
-}
-
+import './js/moviesByRating';
+import './js/moviesBySubmit';
+import './js/adding-watched-movies';
+import './js/loader';
+import './js/button-back';
+import './js/modal-footer';
+import './js/render-cards';

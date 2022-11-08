@@ -1,3 +1,15 @@
+.header {
+    opacity: 0.9;
+}
+.form__text {
+    margin-top: 10px;
+    color: rgba(255, 0, 27, 1);
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.1;
+    font-family: 'Roboto';
+    font-style: normal;
+}
 .header__conteiner {
     padding-top: 42px;
     display: flex;
@@ -51,10 +63,9 @@
 }
 
 .input {
+    color: #ffffff;
     min-width: 280px;
     background-color: transparent;
-    // border: none;
-    // outline-color: #FFFFFF;
     outline: 0;
     border-width: 0 0 0.5px;
     border-color: rgb(255, 255, 255)
@@ -66,7 +77,7 @@
     line-height: 1.1;
     display: flex;
     align-items: center;
-    color: #FFFFFF;
+    color: #ffffff73;
 }
 
 .heder__link {
@@ -100,7 +111,8 @@
     .header {
         width: 100%;
         background-color: #640606;
-        background-image: url('/src/images/background-mobile-1x.jpg');
+        background-image:linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+         url('/src/images/background-mobile-1x.jpg');
         background-repeat: no-repeat;
         background-size: cover;
     }
@@ -109,7 +121,7 @@
     (min-resolution: 192dpi),
     (min-resolution: 2dppx) {
         .header {
-            background-image:
+            background-image:linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
                 url('/src/images/background-mobile-2x.jpg');
         }
     }
@@ -145,7 +157,8 @@
     .header {
         width: 100%;
         background-color: #640606;
-        background-image: url('/src/images/abstract-background-tablet-1x.jpg');
+        background-image:linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+         url('/src/images/abstract-background-tablet-1x.jpg');
         background-repeat: no-repeat;
         background-size: cover;
     }
@@ -154,7 +167,7 @@
     (min-resolution: 192dpi),
     (min-resolution: 2dppx) {
         .header {
-            background-image:
+            background-image:linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
                 url('/src/images/abstract-background-tablet-2x.jpg');
         }
     }
@@ -184,7 +197,8 @@
     .header {
         width: 100%;
         background-color: #640606;
-        background-image: url('/src/images/abstract-background-desktop-1x.jpg');
+        background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+        url('/src/images/abstract-background-desktop-1x.jpg');
         background-repeat: no-repeat;
         background-size: cover;
     }
@@ -193,7 +207,7 @@
     (min-resolution: 192dpi),
     (min-resolution: 2dppx) {
         .header {
-            background-image:
+            background-image:linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
                 url('/src/images/abstract-background-desktop-2x.jpg');
         }
     }
