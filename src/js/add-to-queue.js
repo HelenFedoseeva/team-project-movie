@@ -4,7 +4,6 @@ import { clearContent } from './add-to-watched';
 const queueBtn = document.querySelector('.queue-btn');
 const watchedBtn = document.querySelector('.watched-btn');
 
-
 queueBtn.addEventListener('click', onQueueBtnClick);
 
 async function onQueueBtnClick() {
@@ -14,7 +13,7 @@ async function onQueueBtnClick() {
 
     try {
         const queue = JSON.parse(localStorage.getItem('queue'));
-        renderLibraryCrads(queue, galleryRef);
+        renderLibraryCrads(queue);
     }
     catch (error) {
         console.log(error);
