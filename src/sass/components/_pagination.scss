@@ -2,7 +2,6 @@ ul.pagination {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    margin-top: 46px;
     font-size: 18px;
     line-height: 36px;
     padding: 0;
@@ -74,4 +73,8 @@ ul.pagination > li.disabled > a:focus {
     border: 1px solid #ccc;
     outline: none;
     background-color: #fff;
+}
+
+.container-pagination{
+    padding-top: 46px;
 }
