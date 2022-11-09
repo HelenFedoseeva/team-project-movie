@@ -30,7 +30,7 @@
 
 @keyframes opac {
     0% {
-        opacity: 0
+        opacity: 0;
     }
 
     100% {
@@ -38,9 +38,13 @@
     }
 }
 
+.hide {
+    display: none;
+    animation: opac 2.5s forwards;
+}
 
 .opacity {
-    opacity: 0;
+    opacity: 1;
     position: absolute;
 
 }
