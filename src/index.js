@@ -9,6 +9,7 @@ import './js/moviesBySubmit';
 import './js/adding-watched-movies';
 import './js/loader';
 import './js/button-back';
+import './js/modernizr-custom';
 import './js/modal-footer';
 import './js/render-cards';
 import './js/firebaseUI';
