@@ -1,162 +1,157 @@
 .header-library__conteiner {
-    padding-top: 42px;
-    display: flex;
-    align-items: baseline;
+  padding-top: 42px;
+  display: flex;
+  align-items: baseline;
+}
+
+.header-library__main-conteiner {
+  position: relative;
 }
 
 .header-library__logo-conteiner {
-    margin-right: auto;
-    align-items: center;
-    font-weight: 500;
-        font-size: 30px;
-        line-height: 35px;
+  margin-right: auto;
+  align-items: center;
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 35px;
 }
 
 .header-library__menu {
-    display: flex;
-    justify-content: flex-end;
-
+  display: flex;
+  justify-content: flex-end;
 }
 
 .header-library__item {
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 12px;
-    line-height: 1.1;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.1;
 
-    text-transform: uppercase;
+  text-transform: uppercase;
 
-    &:not(:last-child) {
-        margin-right: 39px;
-    }
+  &:not(:last-child) {
+    margin-right: 39px;
+  }
 }
 
-
-
 .heder-library__link {
-    display: block;
-    color: #FFFFFF;
-    position: relative;
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), text-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
+  display: block;
+  color: #ffffff;
+  position: relative;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    text-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .underline {
-    border-radius: 2px;
+  border-radius: 2px;
 
-    &::after {
-        color: #FF001B;
-        z-index: 1000;
-        display: block;
-        position: absolute;
-        content: "";
-        width: 100%;
-        height: 3px;
-        left: 0;
-        bottom: -5px;
-        background-color: #FF001B;
-        // opacity: 1;
-        transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    }
+  &::after {
+    color: #ff001b;
+    z-index: 1000;
+    display: block;
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 3px;
+    left: 0;
+    bottom: -5px;
+    background-color: #ff001b;
+    // opacity: 1;
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
 }
 
-@media screen and (max-width:768px) {
-    .header-library {
-        width: 100%;
-        background-color: #640606;
-        background-image: url('/src/images/bacgroundP2@1x-mobile.jpg');
-        background-repeat: no-repeat;
-        background-size: cover;
-    }
+@media screen and (max-width: 768px) {
+  .header-library {
+    width: 100%;
+    background-color: #640606;
+    background-image: url('/src/images/bacgroundP2@1x-mobile.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
 
-    @media screen and (min-device-pixel-ratio: 2),
+  @media screen and (min-device-pixel-ratio: 2),
     (min-resolution: 192dpi),
     (min-resolution: 2dppx) {
-        .header-library {
-            background-image:
-                url('/src/images/bacgroundP2@2x-mobile.jpg');
-        }
+    .header-library {
+      background-image: url('/src/images/bacgroundP2@2x-mobile.jpg');
     }
+  }
 
-    .header-library__main-conteiner {
+  .header-library__main-conteiner {
+    height: 230px;
+  }
 
-        height: 230px;
-    }
-
-    .logo-library {
-        display: none;
-    }
+  .logo-library {
+    display: none;
+  }
 }
 
 @media screen and (min-width: 768px) {
-    .logo-library{
+  .logo-library {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 35px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #ffffff;
+  }
 
-        font-family: 'Roboto';
-        font-style: normal;
-        font-weight: 500;
-        font-size: 30px;
-        line-height: 35px;
-        display: flex;
-        align-items: center;
-        text-align: center;
-        color: #ffffff;
-    }
+  .header-library__link-icon:not(:last-child) {
+    margin-right: 12px;
+  }
 
-    .header-library__link-icon:not(:last-child) {
-        margin-right: 12px;
-    }
+  .header-library {
+    width: 100%;
+    background-color: #640606;
+    background-image: url('/src/images/bacgroundP2@1x-tablet.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
 
-    .header-library {
-        width: 100%;
-        background-color: #640606;
-        background-image: url('/src/images/bacgroundP2@1x-tablet.jpg');
-        background-repeat: no-repeat;
-        background-size: cover;
-    }
-
-    @media screen and (min-device-pixel-ratio: 2),
+  @media screen and (min-device-pixel-ratio: 2),
     (min-resolution: 192dpi),
     (min-resolution: 2dppx) {
-        .header-library {
-            background-image:
-                url('/src/images/bacgroundP2@2x-tablet.jpg');
-        }
+    .header-library {
+      background-image: url('/src/images/bacgroundP2@2x-tablet.jpg');
     }
+  }
 
-    .header-library__main-conteiner {
-        height: 216px;
-    }
+  .header-library__main-conteiner {
+    height: 216px;
+  }
 
-    .header-library__conteiner {
-        padding-top: 45px;
-    }
+  .header-library__conteiner {
+    padding-top: 45px;
+  }
 
-    .header-library__logo-conteiner {
-        display: flex;
-    }
+  .header-library__logo-conteiner {
+    display: flex;
+  }
 
-    // .header__logo-conteiner{
-    //     align-items: center;
-    // }
- 
+  // .header__logo-conteiner{
+  //     align-items: center;
+  // }
 }
 
 @media screen and (min-width: 1280px) {
-    .header-library {
-        width: 100%;
-        background-color: #640606;
-        background-image: url('/src/images/bacgroundP2@1x-desctop.jpg');
-        background-repeat: no-repeat;
-        background-size: cover;
-    }
+  .header-library {
+    width: 100%;
+    background-color: #640606;
+    background-image: url('/src/images/bacgroundP2@1x-desctop.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
 
-    @media screen and (min-device-pixel-ratio: 2),
+  @media screen and (min-device-pixel-ratio: 2),
     (min-resolution: 192dpi),
     (min-resolution: 2dppx) {
-        .header-library {
-            background-image:
-                url('/src/images/bacgroundP2@2x-desctop.jpg');
-        }
+    .header-library {
+      background-image: url('/src/images/bacgroundP2@2x-desctop.jpg');
     }
+  }
 }

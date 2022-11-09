@@ -1,34 +1,51 @@
 <header class="header">
-    <div class="container">
-        <div class="header__main-conteiner">
-            <div class="header__conteiner">
-                <div class="header__logo-conteiner">
-                    <a class="header__link-icon " href="/src/index.html">
-                        <svg class="header__icon" width="24" height="24">
-                            <use href="/src/images/symbol-defs.svg#icon-film">
-                            </use>
-                        </svg></a>
-                    <a href="/src/index.html" class="logo">Filmoteka</a>
-                </div>
-                <!-- <img src="./src/images/logo.png" alt="картинка лого"> -->
-
-                <ul class="header__menu">
-                    <li class="header__item "><a class="heder__link underline" href="/src/index.html">Home</a></li>
-                    <li class="header__item "><a class="heder__link " href="/src/my-library.html">my library</a></li>
-                </ul>
-
-            </div>
-            <form class="form" name="form" autocomplete="on">
-                <input class="input" type="text" name="input" placeholder="Movie search">
-                <button class="form__button" type="submit">
-                    <svg class="form__icon">
-                        <use class="form__use" href="/src/images/symbol-defs.svg#icon-search" width="12" height="12">
-
-                        </use>
-                    </svg>
-                </button>
-                <p class="form__text hidden ">Search result not successful. Enter the correct movie name.</p>
-            </form>
+  <div class="container">
+    <div class="header__main-conteiner">
+      <div class="header__conteiner">
+        <div class="header__logo-conteiner">
+          <a class="header__link-icon" href="/src/index.html">
+            <svg class="header__icon" width="24" height="24">
+              <use href="/src/images/symbol-defs.svg#icon-film"></use></svg
+          ></a>
+          <a href="/src/index.html" class="logo">Filmoteka</a>
         </div>
+        <!-- <img src="./src/images/logo.png" alt="картинка лого"> -->
+
+        <ul class="header__menu">
+          <li class="header__item">
+            <a class="heder__link underline" href="/src/index.html">Home</a>
+          </li>
+          <li class="header__item">
+            <a class="heder__link" href="/src/my-library.html">my library</a>
+          </li>
+        </ul>
+      </div>
+      <form class="form" name="form" autocomplete="on">
+        <input
+          class="input"
+          type="text"
+          name="input"
+          placeholder="Movie search"
+        />
+        <button class="form__button" type="submit">
+          <svg class="form__icon">
+            <use
+              class="form__use"
+              href="/src/images/symbol-defs.svg#icon-search"
+              width="12"
+              height="12"
+            ></use>
+          </svg>
+        </button>
+        <p class="form__text hidden">
+          Search result not successful. Enter the correct movie name.
+        </p>
+      </form>
+      <div class="auth">
+        <p class=".header__link" id="sign-in-status"></p>
+        <button id="sign-in"></button>
+        <div class="" id="firebaseui-auth-container"></div>
+      </div>
     </div>
+  </div>
 </header>
