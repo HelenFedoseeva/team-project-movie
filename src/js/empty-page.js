@@ -20,4 +20,4 @@ function renderEmptyImage() {
 
 // checkLocalStorage();
 
-export { checkLocalStorage };
+export { checkLocalStorage, renderEmptyImage };
