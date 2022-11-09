@@ -8,4 +8,4 @@ import './js/firestore';
 import './js/on-myLibrary-click';
 import './js/modernizr-custom';
 import './js/modal-footer';
-
+import './js/open-modal';
