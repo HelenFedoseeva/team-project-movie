@@ -1,7 +1,6 @@
 .header-library__conteiner {
   padding-top: 42px;
   display: flex;
-  align-items: baseline;
 }
 
 .header-library__main-conteiner {
@@ -72,8 +71,8 @@
   }
 
   @media screen and (min-device-pixel-ratio: 2),
-    (min-resolution: 192dpi),
-    (min-resolution: 2dppx) {
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
     .header-library {
       background-image: url('/src/images/bacgroundP2@2x-mobile.jpg');
     }
@@ -114,8 +113,8 @@
   }
 
   @media screen and (min-device-pixel-ratio: 2),
-    (min-resolution: 192dpi),
-    (min-resolution: 2dppx) {
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
     .header-library {
       background-image: url('/src/images/bacgroundP2@2x-tablet.jpg');
     }
@@ -148,8 +147,8 @@
   }
 
   @media screen and (min-device-pixel-ratio: 2),
-    (min-resolution: 192dpi),
-    (min-resolution: 2dppx) {
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
     .header-library {
       background-image: url('/src/images/bacgroundP2@2x-desctop.jpg');
     }
