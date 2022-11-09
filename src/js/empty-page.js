@@ -14,7 +14,7 @@ function checkLocalStorage() {
 
 function renderEmptyImage() {
   const markup = `<p class="empty-page__notification">Sorry 🤷‍♂️! <br> There are no movies in Your library yet. So, grab Your popcorn bucket and come back to us!</p>
-  <img class="empty-page__img" src="../images/empty-page/movies-popcorn.png" alt="popcorn bucket">`;
+  <img class="empty-page__img" src="./images/empty-page/movies-popcorn.png" alt="popcorn bucket">`;
   return emptyPageRef.insertAdjacentHTML('afterbegin', markup);
 }
 
