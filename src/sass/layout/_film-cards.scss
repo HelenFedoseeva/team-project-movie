@@ -3,7 +3,8 @@
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  margin: -15px;
+  //margin: -15px;
+  gap: 30px;
 }
 
 .movie-card {
@@ -15,7 +16,8 @@
   $primary-text-color: #212121;
   min-width: 280px;
   min-height: 443px;
-  margin: 15px;
+  gap: 15px;
+  //margin: 15px;
   border-radius: 5px;
   &:hover,
   &:focus {
