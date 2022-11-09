@@ -5,12 +5,11 @@ function checkLocalStorage() {
   const watched = localStorage.getItem('watched');
   const queue = localStorage.getItem('queue');
 
-  if (watched || queue) {
-    return;
+  if (!watched || !queue || !(watched && queue)) {
+    imgRef.classList.remove('hide');
+    renderEmptyImage();
   }
-  //
-  imgRef.classList.remove('hide');
-  renderEmptyImage();
+  return;
 }
 
 function renderEmptyImage() {
