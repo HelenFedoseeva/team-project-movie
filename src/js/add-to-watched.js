@@ -1,4 +1,5 @@
 import { renderLibraryCrads } from './renderLibraryCrads';
+import { renderEmptyImage } from './empty-page';
 
 const watchedBtn = document.querySelector('.watched-btn');
 const galleryRef = document.querySelector('.gallery');
@@ -13,6 +14,9 @@ async function onWatchedBtnClick() {
     try {
         const watched = localStorage.getItem('watched');
         const parseWatched = JSON.parse(watched);
+        if (!watched) {
+            renderEmptyImage();
+        }
         renderLibraryCrads(parseWatched);
     } catch (error) {
         console.log(error);

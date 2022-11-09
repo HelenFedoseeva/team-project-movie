@@ -18,3 +18,5 @@ function renderEmptyImage() {
 }
 
 checkLocalStorage();
+
+export { renderEmptyImage };
