@@ -63,14 +63,15 @@ initApp = function () {
         var uid = user.uid;
         var phoneNumber = user.phoneNumber;
         var providerData = user.providerData;
+        console.log(displayName);
         user.getIdToken().then(function (accessToken) {
-          document.getElementById('sign-in-status').textContent = 'Signed in';
+          /* document.getElementById('sign-in-status').textContent = 'Signed in'; */
           document.getElementById('sign-in').textContent = 'Sign out';
         });
       } else {
         console.log('User is signed out.');
         // User is signed out.
-        document.getElementById('sign-in-status').textContent = 'Signed out';
+        /* document.getElementById('sign-in-status').textContent = 'Signed out'; */
         document.getElementById('sign-in').textContent = 'Sign in';
         const signIn = document.getElementById('sign-in');
         signIn.addEventListener('click', e => {
