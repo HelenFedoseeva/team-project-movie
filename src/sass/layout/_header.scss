@@ -1,222 +1,265 @@
 .header {
-    opacity: 0.9;
+  opacity: 0.9;
 }
 .form__text {
-    margin-top: 10px;
-    color: rgba(255, 0, 27, 1);
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 1.1;
-    font-family: 'Roboto';
-    font-style: normal;
+  margin-top: 10px;
+  color: rgba(255, 0, 27, 1);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.1;
+  font-family: 'Roboto';
+  font-style: normal;
 }
 .header__conteiner {
-    padding-top: 42px;
-    display: flex;
-    align-items: baseline;
+  padding-top: 42px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.header__main-conteiner {
+  position: relative;
 }
 
 .header__logo-conteiner {
-    margin-right: auto;
-    align-items: center;
+  margin-right: auto;
+  align-items: center;
 }
 
 .header__menu {
-    display: flex;
-    justify-content: flex-end;
-
+  display: flex;
+  justify-content: flex-end;
 }
 
 .header__item {
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 12px;
-    line-height: 1.1;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.1;
 
-    text-transform: uppercase;
+  text-transform: uppercase;
 
-    &:not(:last-child) {
-        margin-right: 39px;
-    }
+  &:not(:last-child) {
+    margin-right: 39px;
+  }
 }
 
 .form__button {
-    position: absolute;
-    top: 3;
-    right: 2;
-    width: 20px;
-    height: 20px;
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
-    overflow: hidden;
-
+  position: absolute;
+  top: 3;
+  right: 2;
+  width: 20px;
+  height: 20px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  overflow: hidden;
 }
 
 .form {
-    width: auto;
-    position: relative;
-    top: 56px;
-    left: 50%;
-    transform: translate(-50%, -50%)
+  width: auto;
+  position: relative;
+  top: 56px;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .input {
-    color: #ffffff;
-    min-width: 280px;
-    background-color: transparent;
-    outline: 0;
-    border-width: 0 0 0.5px;
-    border-color: rgb(255, 255, 255)
+  color: #ffffff;
+  min-width: 280px;
+  background-color: transparent;
+  outline: 0;
+  border-width: 0 0 0.5px;
+  border-color: rgb(255, 255, 255);
 }
 
 .input::placeholder {
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 1.1;
-    display: flex;
-    align-items: center;
-    color: #ffffff73;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.1;
+  display: flex;
+  align-items: center;
+  color: #ffffff73;
 }
 
 .heder__link {
-    display: block;
-    color: #FFFFFF;
-    position: relative;
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), text-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
+  display: block;
+  color: #ffffff;
+  position: relative;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    text-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .underline {
-    border-radius: 2px;
+  border-radius: 2px;
 
-    &::after {
-        color: #FF001B;
-        z-index: 1000;
-        display: block;
-        position: absolute;
-        content: "";
-        width: 100%;
-        height: 3px;
-        left: 0;
-        bottom: -5px;
-        background-color: #FF001B;
-        // opacity: 1;
-        transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    }
+  &::after {
+    color: #ff001b;
+    z-index: 1000;
+    display: block;
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 3px;
+    left: 0;
+    bottom: -5px;
+    background-color: #ff001b;
+    // opacity: 1;
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
 }
 
-@media screen and (max-width:768px) {
-    .header {
-        width: 100%;
-        background-color: #640606;
-        background-image:linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-         url('/src/images/background-mobile-1x.jpg');
-        background-repeat: no-repeat;
-        background-size: cover;
-    }
+@media screen and (max-width: 768px) {
+  .header {
+    width: 100%;
+    background-color: #640606;
+    background-image: linear-gradient(
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url('/src/images/background-mobile-1x.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
 
-    @media screen and (min-device-pixel-ratio: 2),
+  @media screen and (min-device-pixel-ratio: 2),
     (min-resolution: 192dpi),
     (min-resolution: 2dppx) {
-        .header {
-            background-image:linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-                url('/src/images/background-mobile-2x.jpg');
-        }
+    .header {
+      background-image: linear-gradient(
+          rgba(47, 48, 58, 0.4),
+          rgba(47, 48, 58, 0.4)
+        ),
+        url('/src/images/background-mobile-2x.jpg');
     }
+  }
 
-    .header__main-conteiner {
+  .header__main-conteiner {
+    height: 230px;
+  }
 
-        height: 230px;
-    }
-
-    .logo {
-        display: none;
-    }
+  .logo {
+    display: none;
+  }
 }
 
 @media screen and (min-width: 768px) {
-    .logo {
+  .logo {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 35px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #ffffff;
+  }
 
-        font-family: 'Roboto';
-        font-style: normal;
-        font-weight: 500;
-        font-size: 30px;
-        line-height: 35px;
-        display: flex;
-        align-items: center;
-        text-align: center;
-        color: #ffffff;
-    }
+  .header__link-icon:not(:last-child) {
+    margin-right: 12px;
+  }
 
-    .header__link-icon:not(:last-child) {
-        margin-right: 12px;
-    }
+  .header {
+    width: 100%;
+    background-color: #640606;
+    background-image: linear-gradient(
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url('/src/images/abstract-background-tablet-1x.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
 
-    .header {
-        width: 100%;
-        background-color: #640606;
-        background-image:linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-         url('/src/images/abstract-background-tablet-1x.jpg');
-        background-repeat: no-repeat;
-        background-size: cover;
-    }
-
-    @media screen and (min-device-pixel-ratio: 2),
+  @media screen and (min-device-pixel-ratio: 2),
     (min-resolution: 192dpi),
     (min-resolution: 2dppx) {
-        .header {
-            background-image:linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-                url('/src/images/abstract-background-tablet-2x.jpg');
-        }
+    .header {
+      background-image: linear-gradient(
+          rgba(47, 48, 58, 0.4),
+          rgba(47, 48, 58, 0.4)
+        ),
+        url('/src/images/abstract-background-tablet-2x.jpg');
     }
+  }
 
-    .header__main-conteiner {
-        height: 216px;
-    }
+  .header__main-conteiner {
+    height: 216px;
+  }
 
-    .header__conteiner {
-        padding-top: 45px;
-    }
+  .header__conteiner {
+    padding-top: 45px;
+  }
 
-    .header__logo-conteiner {
-        display: flex;
-    }
+  .header__logo-conteiner {
+    display: flex;
+  }
 
-    .input {
-        width: 336px;
-    }
+  .input {
+    width: 336px;
+  }
 
-    .form {
-        width: 336px;
-    }
+  .form {
+    width: 336px;
+  }
 }
 
 @media screen and (min-width: 1280px) {
-    .header {
-        width: 100%;
-        background-color: #640606;
-        background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-        url('/src/images/abstract-background-desktop-1x.jpg');
-        background-repeat: no-repeat;
-        background-size: cover;
-    }
+  .header {
+    width: 100%;
+    background-color: #640606;
+    background-image: linear-gradient(
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url('/src/images/abstract-background-desktop-1x.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
 
-    @media screen and (min-device-pixel-ratio: 2),
+  @media screen and (min-device-pixel-ratio: 2),
     (min-resolution: 192dpi),
     (min-resolution: 2dppx) {
-        .header {
-            background-image:linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-                url('/src/images/abstract-background-desktop-2x.jpg');
-        }
+    .header {
+      background-image: linear-gradient(
+          rgba(47, 48, 58, 0.4),
+          rgba(47, 48, 58, 0.4)
+        ),
+        url('/src/images/abstract-background-desktop-2x.jpg');
     }
+  }
 
-    .input {
-        width: 394px;
-    }
+  .input {
+    width: 394px;
+  }
 
-    .form {
-        width: 394px;
-    }
+  .form {
+    width: 394px;
+  }
+}
+
+.header-login__button {
+  border: none;
+  background: transparent;
+  font-family: 'Roboto';
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.1;
+  color: #ffffff;
+  position: relative;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    text-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  &:not(:last-child) {
+    margin-right: 39px;
+  }
+  text-transform: uppercase;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.header-wrap:last-child {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
 }

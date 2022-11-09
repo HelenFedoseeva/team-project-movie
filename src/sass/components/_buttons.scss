@@ -1,48 +1,47 @@
-
 .btn {
-cursor: pointer;
-border: 1px solid #FFFFFF;
-border-radius: 5px;
-background-color: transparent;
-font-weight: 500;
-font-size: 12px;
-line-height: 16px;
-display: inline-block;
-padding: 13px;
-text-align: center;
-text-transform: uppercase;
-color: #FFFFFF;
-@media screen and (min-width: 320px) and (max-width: 767px) {
-width: 129.53px;
-height: 42px;
-}
-@media screen and (min-width: 768px) and (max-width: 1279px) {
-width: 152px;
-height: 44px;
-}
-@media screen and (min-width: 1280px) {
-width: 148px;
-height: 42px;
-}
+  cursor: pointer;
+  border: 1px solid #ffffff;
+  border-radius: 5px;
+  background-color: transparent;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+  display: inline-block;
+  padding: 13px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #ffffff;
+  @media screen and (min-width: 320px) and (max-width: 767px) {
+    width: 129.53px;
+    height: 42px;
+  }
+  @media screen and (min-width: 768px) and (max-width: 1279px) {
+    width: 152px;
+    height: 44px;
+  }
+  @media screen and (min-width: 1280px) {
+    width: 148px;
+    height: 42px;
+  }
 }
 
 .navigation {
-@media screen and (max-width: 767px) {
-gap: 20px;
-}
-@media screen and (min-width: 768px) and (max-width: 1279px) {
-gap: 32px;
-}
-@media screen and (min-width: 1280px) {
-gap: 16px;
-}
-display: flex;
-align-items: center;
-justify-content: center;
+  @media screen and (max-width: 767px) {
+    gap: 20px;
+  }
+  @media screen and (min-width: 768px) and (max-width: 1279px) {
+    gap: 32px;
+  }
+  @media screen and (min-width: 1280px) {
+    gap: 16px;
+  }
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .navigation-div {
-    padding: 62px 0px; 
+  padding: 40px 0 0 0;
 }
 .is-active {
   background-color: #ff6b08;

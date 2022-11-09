@@ -36,6 +36,7 @@
 .footer-link {
     display: inline-block;
     color: #545454;
+    text-decoration: underline;
 
     @media screen and (min-width: 768px) {
         font-size: 16px;
@@ -137,7 +138,7 @@ body.lock {
 .popup__content {
     background-color: #cebfb9;
     color: var(--primary_color);
-    max-width: 1200px;
+    max-width: 1000px;
     padding: 20px;
     position: relative;
                 
@@ -318,52 +319,94 @@ body.lock {
     background-size: cover;
     background-position: center;
     border-radius: 50%;
-    margin-bottom: 10px
+    margin-bottom: 10px;
+    margin-top: 10px;
+
 }
 
-.dev-1 {
-    background-image: url('../images/team-photo/Helen Fedoseeva.jpg');
-}
 
-.dev-2 {
-    background-image: url('../images/team-photo/Galyna Matvienko.jpg');
-}
+.webp {
+        .dev-1 {
+                background: url('../images/team-photo/Helen Fedoseeva.webp') no-repeat center/cover;
+            }
+        .dev-2 {
+            background: url('../images/team-photo/Galyna Matvienko.webp') no-repeat center/cover;
+        }
+    
+        .dev-3 {
+            background: url('../images/team-photo/Elena Abramova.webp') no-repeat center/cover;
+        }
+    
+        .dev-4 {
+            background: url('../images/team-photo/Dmitriy Bazaley.webp') no-repeat center/cover;
+        }
+    
+        .dev-5 {
+            background: url('../images/team-photo/Zara Melikyan.webp') no-repeat center/cover;
+        }
+    
+        .dev-6 {
+            background: url('../images/team-photo/Aleksandr Protopop.webp') no-repeat center/cover;
+        }
+    
+        .dev-7 {
+            background: url('../images/team-photo/Svetlana Redyukhina.webp') no-repeat center/cover;
+        }
+    
+        .dev-8 {
+            background: url('../images/team-photo/Deniss Simonaits.webp') no-repeat center/cover;
+        }
+    
+        .dev-9 {
+            background: url('../images/team-photo/Andrii Sokolovskyi.webp') no-repeat center/cover;
+        }
+    
+        .dev-10 {
+            background: url('../images/team-photo/Kirill Volkov.webp') no-repeat center/cover;
+        }
+        }
+    
+.no-webp {
+            .dev-1 {
+                background: url('../images/team-photo/Helen Fedoseeva.jpg') no-repeat center/cover;
+            }
+            .dev-2 {
+                background-image: url('../images/team-photo/Galyna Matvienko.jpg') no-repeat center/cover;
+            }
+        
+            .dev-3 {
+                background-image: url('../images/team-photo/Elena Abramova.jpg') no-repeat center/cover;
+            }
+        
+            .dev-4 {
+                background-image: url('../images/team-photo/Dmitriy Bazaley.jpg') no-repeat center/cover;
+            }
+        
+            .dev-5 {
+                background-image: url('../images/team-photo/Zara Melikyan.jpg') no-repeat center/cover;
+            }
+        
+            .dev-6 {
+                background-image: url('../images/team-photo/Aleksandr Protopop.jpg') no-repeat center/cover;
+            }
+        
+            .dev-7 {
+                background-image: url('../images/team-photo/Svetlana Redyukhina.jpg') no-repeat center/cover;
+            }
+        
+            .dev-8 {
+                background-image: url('../images/team-photo/Deniss Simonaits.jpg') no-repeat center/cover;
+            }
+        
+            .dev-9 {
+                background-image: url('../images/team-photo/Andrii Sokolovskyi.jpg') no-repeat center/cover;
+            }
+        
+            .dev-10 {
+                background-image: url('../images/team-photo/Kirill Volkov.jpg') no-repeat center/cover;
+            }                
+        }
 
-.dev-3 {
-    background-image: url('../images/team-photo/Elena Abramova.jpg');
-}
-
-.dev-4 {
-    background-image: url('../images/team-photo/Dmitriy Bazaley.jpg');
-}
-
-.dev-5 {
-    background-image: url('../images/team-photo/Andrew Levik.jpg');
-}
-
-.dev-6 {
-    background-image: url('../images/team-photo/Zara Melikyan.jpg');
-}
-
-.dev-7 {
-    background-image: url('../images/team-photo/Aleksandr Protopop.jpg');
-}
-
-.dev-8 {
-    background-image: url('../images/team-photo/Svetlana Redyukhina.jpg');
-}
-
-.dev-9 {
-    background-image: url('../images/team-photo/Deniss Simonaits.jpg');
-}
-
-.dev-10 {
-    background-image: url('../images/team-photo/Andrii Sokolovskyi.jpg');
-}
-
-.dev-11 {
-    background-image: url('../images/team-photo/Kirill Volkov.jpg');
-}
 
 
 .card-photo-wizard {
@@ -374,56 +417,97 @@ body.lock {
     border-radius: 17px;
 }
 
-.dev-wizard-1 {
-    background-image: url('../images/team-photo/Helen Fedoseeva wizard.jpg');
+
+
+.webp {
+    .dev-wizard-1 {
+        background: url('../images/team-photo/Helen Fedoseeva wizard.webp') no-repeat center/cover;
+    }
+
+    .dev-wizard-2 {
+        background: url('../images/team-photo/Galyna Matvienko wizard.webp') no-repeat center/cover;
+    }
+
+    .dev-wizard-3 {
+        background: url('../images/team-photo/Elena Abramova wizard.webp') no-repeat center/cover;
+    }
+
+    .dev-wizard-4 {
+        background: url('../images/team-photo/Dmitriy Bazaley wizard.webp') no-repeat center/cover;
+    }
+
+   .dev-wizard-5{
+        background: url('../images/team-photo/Zara Melikyan wizard.webp') no-repeat center/cover;
+    }
+
+    .dev-wizard-6 {
+        background: url('../images/team-photo/Aleksandr Protopop wizard.webp') no-repeat center/cover;
+    }
+
+   .dev-wizard-7 {
+        background: url('../images/team-photo/Svetlana Redyukhina wizard.webp') no-repeat center/cover;
+    }
+
+    .dev-wizard-8 {
+        background: url('../images/team-photo/Deniss Simonaits wizard.webp') no-repeat center/cover;
+    }
+
+    .dev-wizard-9 {
+        background: url('../images/team-photo/Andrii Sokolovskyi wizard.webp') no-repeat center/cover;
+    }
+
+    .dev-wizard-10 {
+        background: url('../images/team-photo/Kirill Volkov wizard.webp') no-repeat center/cover;
+    }
 }
 
-.dev-wizard-2 {
-    background-image: url('../images/team-photo/1667755988480.jpg');
+.no-webp {
+    .dev-wizard-1 {
+        background: url('../images/team-photo/Helen Fedoseeva wizard.jpg') no-repeat center/cover;
+    }
+
+    .dev-wizard-2 {
+        background-image: url('../images/team-photo/Galyna Matvienko wizard.jpg') no-repeat center/cover;
+    }
+
+    .dev-wizard-3 {
+        background-image: url('../images/team-photo/Elena Abramova wizard.jpg') no-repeat center/cover;
+    }
+
+    .dev-wizard-4 {
+        background-image: url('../images/team-photo/Dmitriy Bazaley wizard.jpg') no-repeat center/cover;
+    }
+
+    .dev-wizard-5 {
+        background-image: url('../images/team-photo/Zara Melikyan wizard.jpg') no-repeat center/cover;
+    }
+
+    .dev-wizard-6 {
+        background-image: url('../images/team-photo/Aleksandr Protopop wizard.jpg') no-repeat center/cover;
+    }
+
+    .dev-wizard-7 {
+        background-image: url('../images/team-photo/Svetlana Redyukhina wizard.jpg') no-repeat center/cover;
+    }
+
+    .dev-wizard-8 {
+        background-image: url('../images/team-photo/Deniss Simonaits wizard.jpg') no-repeat center/cover;
+    }
+
+    .dev-wizard-9 {
+        background-image: url('../images/team-photo/Andrii Sokolovskyi wizard.jpg') no-repeat center/cover;
+    }
+
+    .dev-wizard-10 {
+        background-image: url('../images/team-photo/Kirill Volkov wizard.jpg') no-repeat center/cover;
+    }
 }
 
-.dev-wizard-3 {
-    background-image: url('../images/team-photo/Elena Abramova wizard.jpg');
-}
 
-.dev-wizard-4 {
-    background-image: url('../images/team-photo/1667748435743.jpg');
-}
-
-.dev-wizard-5 {
-    background-image: url('../images/team-photo/1667748435776.jpg');
-}
-
-.dev-wizard-6 {
-    background-image: url('../images/team-photo/1667748435754.jpg');
-}
-
-.dev-wizard-7 {
-    background-image: url('../images/team-photo/1667748435772.jpg');
-}
-
-.dev-wizard-8 {
-    background-image: url('../images/team-photo/1667753771610.jpg');
-}
-
-.dev-wizard-9 {
-    background-image: url('../images/team-photo/1667748435746.jpg');
-}
-
-.dev-wizard-10 {
-    background-image: url('../images/team-photo/1667748435757.jpg');
-}
-
-.dev-wizard-11 {
-    background-image: url('../images/team-photo/1667748435749.jpg');
-}
 
 .card-back {
     transform: rotateY(180deg);
 }
-
-
-
 
 .team__social-link {
     color: #545454;

@@ -1,34 +1,41 @@
 <header class="header-library">
-    <div class="container">
-        <div class="header-library__main-conteiner">
-            <div class="header-library__conteiner">
-                <div class="header-library__logo-conteiner">
-                    <a class="header-library__link-icon " href="/src/index.html">
-                        <svg class="header-library__icon" width="24" height="24">
-                            <use href="/src/images/symbol-defs.svg#icon-film">
-                            </use>
-                        </svg></a>
-                    <a href="" class="logo">Filmoteka</a>
-                </div>
-
-                <ul class="header-library__menu">
-                    <li class="header-library__item "><a class="heder__link " href="/src/index.html">Home</a></li>
-                    <li class="header-library__item "><a class="heder__link underline library-link"
-                            href="/src/my-library.html">my
-                            library</a></li>
-                </ul>
-
-            </div>
-            <div class="navigation-div">
-                <ul class="navigation">
-                    <li class="navigation-item">
-                        <button class="btn watched-btn" type="button">Watched</button>
-                    </li>
-                    <li class="navigation-item">
-                        <button class="btn queue-btn" type="button">Queue</button>
-                    </li>
-                </ul>
-            </div>
+  <div class="container">
+    <div class="header-library__main-conteiner">
+      <div class="header-library__conteiner">
+        <div class="header-library__logo-conteiner">
+          <a class="header-library__link-icon" href="/src/index.html">
+            <svg class="header-library__icon" width="24" height="24">
+              <use href="/src/images/symbol-defs.svg#icon-film"></use>
+            </svg>
+          </a>
+          <a href="/src/index.html" class="logo">Filmoteka</a>
         </div>
+        <div class="header-wrap">
+          <ul class="header-library__menu">
+            <li class="header-library__item">
+              <a class="heder__link" href="/src/index.html">Home</a>
+            </li>
+            <li class="header-library__item">
+              <a class="heder__link underline" href="/src/my-library.html"
+                >my library</a
+              >
+            </li>
+          </ul>
+          <button class="header-login__button" id="sign-in">Sing In</button>
+          <p class=".header__link" id="sign-in-status"></p>
+          <div id="firebaseui-auth-container"></div>
+        </div>
+      </div>
+      <div class="navigation-div">
+        <ul class="navigation">
+          <li class="navigation-item">
+            <button class="btn watched-btn" type="button">Watched</button>
+          </li>
+          <li class="navigation-item">
+            <button class="btn queue-btn" type="button">Queue</button>
+          </li>
+        </ul>
+      </div>
     </div>
+  </div>
 </header>
