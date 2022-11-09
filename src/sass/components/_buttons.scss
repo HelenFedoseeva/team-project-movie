@@ -1,5 +1,6 @@
-
 .btn {
+
+cursor: pointer;
 border: 1px solid #FFFFFF;
 border-radius: 5px;
 background-color: transparent;
@@ -23,25 +24,28 @@ height: 44px;
 width: 148px;
 height: 42px;
 }
+
 }
 
 .navigation {
-@media screen and (max-width: 767px) {
-gap: 20px;
-}
-@media screen and (min-width: 768px) and (max-width: 1279px) {
-gap: 32px;
-}
-@media screen and (min-width: 1280px) {
-gap: 16px;
-}
-display: flex;
-align-items: center;
-justify-content: center;
+  @media screen and (max-width: 767px) {
+    gap: 20px;
+  }
+  @media screen and (min-width: 768px) and (max-width: 1279px) {
+    gap: 32px;
+  }
+  @media screen and (min-width: 1280px) {
+    gap: 16px;
+  }
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .navigation-div {
-    padding: 40px 0px; 
+
+    padding: 62px 0px; 
+
 }
 .is-active {
   background-color: #ff6b08;
