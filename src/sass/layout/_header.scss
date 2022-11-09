@@ -263,3 +263,13 @@
   flex-direction: column;
   align-items: flex-end;
 }
+
+.header-buttons {
+  display: flex;
+}
+
+.header-buttons__item {
+  &:not(:last-child) {
+    margin-right: 25px;
+  }
+}
