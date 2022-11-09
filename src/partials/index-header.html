@@ -20,8 +20,18 @@
               <a class="heder__link" href="/src/my-library.html">my library</a>
             </li>
           </ul>
-          <button class="header-login__button" id="sign-in">Sing In</button>
-          <p class=".header__link" id="sign-in-status"></p>
+          <ul class="header-buttons">
+            <li class="header-buttons__item">
+              <button class="header-login__button is-hidden" id="sign-in">
+                Sign In
+              </button>
+            </li>
+            <li class="header-buttons__item">
+              <button class="header-login__button is-hidden" id="sign-out">
+                Sign Out
+              </button>
+            </li>
+          </ul>
           <div id="firebaseui-auth-container"></div>
         </div>
       </div>
