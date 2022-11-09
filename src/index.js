@@ -11,3 +11,5 @@ import './js/loader';
 import './js/button-back';
 import './js/modal-footer';
 import './js/render-cards';
+import './js/firebaseUI';
+import './js/firestore';
