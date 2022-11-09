@@ -12,30 +12,27 @@ const watchedBtn = document.querySelector('.watched-btn');
 const queueBtn = document.querySelector('.queue-btn');
 
 export async function onLibraryClickHandler() {
-    //evt.preventDefault();
-    try {
-        if (watched) {
-            clearContent();
-            watchedBtn.classList.add('is-active');
-            const parseWatched = JSON.parse(watched);
-            renderLibraryCrads(parseWatched);
-            const emptyDiv = document.querySelector('.empty-page');
-            emptyDiv.innerHTML = '';
-            return;
-        }
-        else if (queue) {
-            clearContent();
-            queueBtn.classList.add('is-active');
-            const parseQueue = JSON.parse(queue);
-            renderLibraryCrads(parseQueue);
-            return;
-        }
-        else if (watched === null || queue === null) {
-            renderEmptyImage();
-        }
+  //evt.preventDefault();
+  try {
+    if (watched) {
+      clearContent();
+      watchedBtn.classList.add('is-active');
+      const parseWatched = JSON.parse(watched);
+      renderLibraryCrads(parseWatched);
+      // const emptyDiv = document.querySelector('.empty-page');
+      // emptyDiv.innerHTML = '';
+      return;
+    } else if (queue) {
+      clearContent();
+      queueBtn.classList.add('is-active');
+      const parseQueue = JSON.parse(queue);
+      renderLibraryCrads(parseQueue);
+      return;
+    } else if (watched === null || queue === null) {
+      renderEmptyImage();
     }
-    catch (error) {
-        console.log(error);
-    }
+  } catch (error) {
+    console.log(error);
+  }
 }
 onLibraryClickHandler();
