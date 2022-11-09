@@ -12,5 +12,5 @@ import './js/button-back';
 import './js/modernizr-custom';
 import './js/modal-footer';
 import './js/render-cards';
-import './js/firebaseUI';
-import './js/firestore';
+// import './js/firebaseUI';
+// import './js/firestore';
