@@ -8,4 +8,5 @@ import './js/empty-page';
 import './js/on-myLibrary-click';
 
 // import './js/firebaseUI';
-
+import './js/modernizr-custom';
+import './js/modal-footer';
