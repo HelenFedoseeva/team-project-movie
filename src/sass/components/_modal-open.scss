@@ -91,6 +91,7 @@
 
 .wrapper__info {
   display: flex;
+  margin-bottom: 20px;
 }
 
 .image {
@@ -135,7 +136,6 @@
 }
 
 .list {
-  margin-bottom: 20px;
   &:not(:last-child) {
     margin-right: 39px;
   }
