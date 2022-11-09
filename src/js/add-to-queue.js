@@ -1,5 +1,6 @@
 import { renderLibraryCrads } from './renderLibraryCrads';
 import { clearContent } from './add-to-watched';
+import { renderEmptyImage } from './empty-page';
 
 const queueBtn = document.querySelector('.queue-btn');
 const watchedBtn = document.querySelector('.watched-btn');
@@ -13,6 +14,9 @@ async function onQueueBtnClick() {
 
     try {
         const queue = JSON.parse(localStorage.getItem('queue'));
+        if (queue === null) {
+            renderEmptyImage();
+        }
         renderLibraryCrads(queue);
     }
     catch (error) {
