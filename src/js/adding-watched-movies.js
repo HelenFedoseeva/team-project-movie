@@ -19,6 +19,8 @@ function checkLocalStorage(movie, key) {
 
   if (!keyFromLocalStorage) {
     addLocalStorage([movie], `${key}`);
+    const button = document.querySelector(`button[data-add="${key}"]`);
+    button.textContent = `already added to ${key}`;
     return;
   }
 
