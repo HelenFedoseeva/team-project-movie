@@ -2,15 +2,17 @@ import getGenres from './get-genres';
 
 const IMAGE_URL = 'https://image.tmdb.org/t/p/w500';
 
-// fechMuviTrend().then(resp => {
-//   renderCards(resp, cardListEl);
-// });
-
 function createCards(movies) {
   const { results } = movies;
   return results
     .map(({ poster_path, title, release_date, id, genre_ids }) => {
-      const genre = getGenres(genre_ids);
+      let genre = getGenres(genre_ids);
+      if (genre === '') {
+        genre = 'unknown';
+      }
+      if (release_date === '') {
+        release_date = 'none';
+      }
       return `<li class="movie-card">
       <img src="${IMAGE_URL}${poster_path}" alt="${title}" class="movie-card-img" data-id="${id}" loading="lazy"/>
       <div class="movie-info">
