@@ -36,11 +36,11 @@ onAuthStateChanged(auth, user => {
     signIn.classList.remove('is-hidden');
     signOut.classList.add('is-hidden');
     signIn.addEventListener('click', onSignInButton);
-    console.log('logout');
+    // console.log('logout');
   }
 });
 
-console.log(auth);
+// console.log(auth);
 
 function onSignInButton(e) {
   signInWithPopup(auth, provider)
