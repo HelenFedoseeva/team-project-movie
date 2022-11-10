@@ -20,7 +20,6 @@ async function onWatchedBtnClick() {
       checkLocalStorage();
       return;
     } else if (popcornImg.classList.contains('hide')) {
-      console.log(1233);
       const parseWatched = JSON.parse(watched);
       emptyRef.innerHTML = '';
       renderLibraryCrads(parseWatched);
