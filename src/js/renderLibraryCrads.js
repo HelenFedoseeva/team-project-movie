@@ -5,7 +5,7 @@ export function renderLibraryCrads(movies) {
   const markup = movies
     .map(movie => {
       const data = movie.data;
-      const { poster_path, genres, title, id, release_date } = data;
+      let { poster_path, genres, title, id, release_date } = data;
       return `<li class="movie-card">
       <img src="${IMAGE_URL}${poster_path}" alt="${title} class="movie-card-img" data-id='${id}'/>
       <div class="movie-info">
