@@ -39,7 +39,7 @@ function modalCardRender({
            <p class="list__item-text">Genre</p>
           </li>
         </ul>
-        <ul class="list list_width">
+        <ul class="list list__width">
           <li class="list__item">
            <p class="list__item-elem">
              <span class="active">${vote_average}</span> / ${vote_count}
@@ -155,7 +155,7 @@ function modalCardRender({
              <p class="list__item-text">Genre</p>
             </li>
           </ul>
-          <ul class="list list_width">
+          <ul class="list list__width">
             <li class="list__item">
              <p class="list__item-elem">
                <span class="active">${vote_average}</span> / ${vote_count}
@@ -188,7 +188,6 @@ function modalCardRender({
       </div>
   `;
   }
-  console.log(markup);
 
   modalRef.insertAdjacentHTML('beforeend', markup);
 }

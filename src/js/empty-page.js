@@ -2,18 +2,18 @@ const emptyPageRef = document.querySelector('.empty-page');
 const imgRef = document.querySelector('.empty-page__img');
 
 function checkLocalStorage() {
-  const watched = localStorage.getItem('watched');
-  const queue = localStorage.getItem('queue');
+  const watched = JSON.parse(localStorage.getItem('watched'));
+  const queue = JSON.parse(localStorage.getItem('queue'));
 
-  if (queue && !watched) {
+  if (queue.length > 0 && watched.length === 0) {
     imgRef.classList.remove('hide');
     renderEmptyImage();
     return;
-  } else if (watched && queue) {
+  } else if (watched.length > 0 && queue.length > 0) {
     return;
-  } else if (queue) {
+  } else if (queue > 0) {
     return;
-  } else if (watched && !queue) {
+  } else if (watched.length > 0 && queue.length === 0) {
     imgRef.classList.remove('hide');
     renderEmptyImage();
   }
@@ -29,18 +29,18 @@ function renderEmptyImage() {
 export { checkLocalStorage, renderEmptyImage };
 
 function renderPopcornImg() {
-  const watched = localStorage.getItem('watched');
-  const queue = localStorage.getItem('queue');
+  const watched = JSON.parse(localStorage.getItem('watched'));
+  const queue = JSON.parse(localStorage.getItem('queue'));
 
-  if (!watched && queue) {
+  if (watched.length === 0 && queue.length > 0) {
     imgRef.classList.remove('hide');
     renderEmptyImage();
     return;
-  } else if (!watched && !queue) {
+  } else if (watched.length === 0 && queue.length === 0) {
     imgRef.classList.remove('hide');
     renderEmptyImage();
     return;
-  } else if (watched) {
+  } else if (watched.length > 0) {
     return;
   }
 }
