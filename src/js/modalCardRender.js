@@ -13,7 +13,17 @@ function modalCardRender({
   genres,
   overview,
 }) {
-  const movieGenres = genres.map(genre => genre.name).join(',');
+
+  let movieGenres = genres.map(genre => genre.name).join(',');
+  if (movieGenres === '') {
+    movieGenres = 'unknown';
+  }
+  const markup = ` 
+  <div class="wrapper">
+    <div class="image">
+      <img class='poster' src="${IMAGE_URL}${poster_path}" alt="${title}" />
+    </div>
+
 
   let markup = null;
 

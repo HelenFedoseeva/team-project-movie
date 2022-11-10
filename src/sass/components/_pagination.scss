@@ -1,4 +1,4 @@
-ul.pagination {
+.pagination {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -12,24 +12,25 @@ ul.pagination {
     color: var(--primary_color);
 }
 
-ul.pagination:before {
+.pagination:before {
     display: table;
     content: ' ';
 }
 
-ul.pagination:after {
+.pagination:after {
     display: table;
     clear: both;
     content: ' ';
 }
 
-ul.pagination > li {
+.pagination_item {
     float: left;
     margin: 0 2px;
     padding: 0;
 }
 
-ul.pagination > li > a {
+.pagination_link {
+    border: 1px solid transparent;
     display: block;
     margin: 0;
     padding: 0 14px;
@@ -42,11 +43,11 @@ ul.pagination > li > a {
     background-color: #fff;
 }
 
-ul.pagination > li > a:hover {
+.pagination_link:hover {
     border: 1px solid var(--secondary_color);
 }
 
-ul.pagination > li > span {
+.pagination_span {
     display: inline;
     padding: 7px 10px;
     cursor: default;
@@ -54,9 +55,35 @@ ul.pagination > li > span {
     color: var(--primary_color);
 }
 
-ul.pagination > li.active > a,
-ul.pagination > li.active > a:hover,
-ul.pagination > li.active > a:focus {
+.pagination_bullet {
+    display: flex;
+    justify-content: center;
+    width: 40px;
+    height: 38px;
+    border-radius: 5px;
+        color: var(--primary_color);
+            // border: 1px solid var(--secondary_color);
+            outline: none;
+            background-color: #F7F7F7;
+
+    &:hover {
+        outline: 1px solid var(--secondary_color);
+    }
+}
+
+.pagination_bullet.disabled {
+    background-color: transparent;
+        cursor: not-allowed;
+            display: none;
+            color: #999;
+            border: 1px solid #ccc;
+            outline: none;
+            background-color: #fff;
+}
+
+.pagination_item.active > .pagination_link,
+.pagination_item.active > .pagination_link:hover,
+.pagination_item.active > .pagination_link:focus {
     cursor: default;
     color: #fff;
     border: 1px solid var(--secondary_color);
@@ -64,9 +91,9 @@ ul.pagination > li.active > a:focus {
     background-color: var(--secondary_color);
 }
 
-ul.pagination > li.disabled > a,
-ul.pagination > li.disabled > a:hover,
-ul.pagination > li.disabled > a:focus {
+.pagination_item.disabled > .pagination_link,
+.pagination_item.disabled > .pagination_link:hover,
+.pagination_item.disabled > .pagination_link:focus {
     cursor: not-allowed;
     display: none;
     color: #999;

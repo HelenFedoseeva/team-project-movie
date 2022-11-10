@@ -99,6 +99,10 @@
   width: 240px;
   height: 357px;
   background-color: gray;
+  background-image: url('../images/image-not-found.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 
   overflow: hidden;
   @media screen and (max-width: 767px) {
@@ -120,6 +124,7 @@
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
+ 
 }
 
 .wrapper__title {
@@ -170,7 +175,7 @@
 }
 
 .list_width {
-  width: 100px;
+  min-width: 100px;
 }
 
 .list__item-text {
