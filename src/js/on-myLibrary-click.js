@@ -11,7 +11,7 @@ const queue = localStorage.getItem('queue');
 const watchedBtn = document.querySelector('.watched-btn');
 const queueBtn = document.querySelector('.queue-btn');
 
-export async function onLibraryClickHandler() {
+export function onLibraryClickHandler() {
   //evt.preventDefault();
   watchedBtn.classList.add('is-active');
   try {
