@@ -17,5 +17,5 @@ export function renderLibraryCrads(movies) {
     </li>`;
     })
     .join('');
-  galleryRef.insertAdjacentHTML('beforeend', markup);
+  galleryRef.innerHTML = markup;
 }
