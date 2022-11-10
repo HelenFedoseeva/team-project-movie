@@ -5,12 +5,18 @@ function checkLocalStorage() {
   const watched = localStorage.getItem('watched');
   const queue = localStorage.getItem('queue');
 
-  if (watched || queue) {
+  if (queue && !watched) {
+    imgRef.classList.remove('hide');
+    renderEmptyImage();
     return;
+  } else if (watched && queue) {
+    return;
+  } else if (queue) {
+    return;
+  } else if (watched && !queue) {
+    imgRef.classList.remove('hide');
+    renderEmptyImage();
   }
-  //
-  imgRef.classList.remove('hide');
-  renderEmptyImage();
 }
 
 function renderEmptyImage() {
@@ -18,6 +24,25 @@ function renderEmptyImage() {
   return (emptyPageRef.innerHTML = markup);
 }
 
-checkLocalStorage();
+// checkLocalStorage();
 
 export { checkLocalStorage, renderEmptyImage };
+
+function renderPopcornImg() {
+  const watched = localStorage.getItem('watched');
+  const queue = localStorage.getItem('queue');
+
+  if (!watched && queue) {
+    imgRef.classList.remove('hide');
+    renderEmptyImage();
+    return;
+  } else if (!watched && !queue) {
+    imgRef.classList.remove('hide');
+    renderEmptyImage();
+    return;
+  } else if (watched) {
+    return;
+  }
+}
+
+renderPopcornImg();
