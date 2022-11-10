@@ -89,24 +89,26 @@
       $target.empty();
       // 上一页
       $target.append(
-        '<li><a herf="javascript:void(0)" data-page="prev">' +
+        '<li class="pagination_item pagination_bullet"><a herf="javascript:void(0)" data-page="prev" class="pagination_bullet_link">' +
           options.prev +
           '</a></li>'
       );
       var page = this.getPages();
       if (page.start > 1) {
         $target.append(
-          '<li><a herf="javascript:void(0)" data-page="' +
+          '<li class="pagination_item"><a herf="javascript:void(0)" class="pagination_link" data-page="' +
             1 +
             '">' +
             1 +
             '</a></li>'
         );
-        $target.append('<li><span>...</span></li>');
+        $target.append(
+          '<li class="pagination_item"><span class="pagination_span">...</span></li>'
+        );
       }
       for (var i = page.start; i <= page.end; i++) {
         $target.append(
-          '<li><a herf="javascript:void(0)" data-page="' +
+          '<li class="pagination_item"><a herf="javascript:void(0)" class="pagination_link" data-page="' +
             i +
             '">' +
             i +
@@ -114,9 +116,11 @@
         );
       }
       if (page.end < Math.ceil(options.total / options.length)) {
-        $target.append('<li><span>...</span></li>');
         $target.append(
-          '<li><a herf="javascript:void(0)" data-page="' +
+          '<li class="pagination_item"><span class="pagination_span">...</span></li>'
+        );
+        $target.append(
+          '<li class="pagination_item"><a herf="javascript:void(0)" class="pagination_link" data-page="' +
             Math.ceil(options.total / options.length) +
             '">' +
             Math.ceil(options.total / options.length) +
@@ -124,7 +128,7 @@
         );
       }
       $target.append(
-        '<li><a herf="javascript:void(0)" data-page="next">' +
+        '<li class="pagination_item pagination_bullet"><a herf="javascript:void(0)" data-page="next" class="pagination_bullet_link">' +
           options.next +
           '</a></li>'
       );

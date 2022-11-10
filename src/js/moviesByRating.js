@@ -22,8 +22,8 @@ async function fetchMovieByRating() {
     current: currentPage,
     length: 20,
     size: 2,
-    prev: '&lt;',
-    next: '&gt;',
+    prev: '🡠',
+    next: '🡢',
     click: function (e) {
       currentPage = e.current;
       loaderShow();
