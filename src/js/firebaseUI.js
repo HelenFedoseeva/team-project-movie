@@ -3,12 +3,15 @@ import {
   signInWithPopup,
   GoogleAuthProvider,
   onAuthStateChanged,
+  FacebookAuthProvider,
 } from 'firebase/auth';
+import { doc, getDoc } from 'firebase/firestore';
 import { initializeApp } from 'firebase/app';
 
-const provider = new GoogleAuthProvider();
+const providerG = new GoogleAuthProvider();
 const signOut = document.getElementById('sign-out');
 const signIn = document.getElementById('sign-in');
+const textEl = document.getElementById('firebase-text');
 
 const firebaseConfig = {
   apiKey: 'AIzaSyD7CsEm56jWNDQOKLhPLg-pdR78AzWnp1c',
@@ -22,28 +25,28 @@ const firebaseConfig = {
   measurementId: 'G-WHTCB43FF1',
 };
 
-const app = initializeApp(firebaseConfig);
-const auth = getAuth();
+export const app = initializeApp(firebaseConfig);
+export const auth = getAuth();
 
 onAuthStateChanged(auth, user => {
   if (user) {
-    signIn.classList.add('is-hidden');
     signOut.classList.remove('is-hidden');
     const uid = user.uid;
     signOut.addEventListener('click', onSignOutButton);
     console.log('logIn');
+    textEl.classList.remove('is-hidden');
+    textEl.textContent = `Hello ${user.displayName}`;
+    return user;
   } else {
+    textEl.classList.add('is-hidden');
     signIn.classList.remove('is-hidden');
-    signOut.classList.add('is-hidden');
     signIn.addEventListener('click', onSignInButton);
-    // console.log('logout');
+    console.log('logout');
   }
 });
 
-// console.log(auth);
-
-function onSignInButton(e) {
-  signInWithPopup(auth, provider)
+function onSignInButton() {
+  signInWithPopup(auth, providerG)
     .then(result => {
       const credential = GoogleAuthProvider.credentialFromResult(result);
       const token = credential.accessToken;
