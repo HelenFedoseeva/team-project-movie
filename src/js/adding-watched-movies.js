@@ -65,17 +65,6 @@ function checkLocalStorage(movie, key) {
     ({ data: { id } }) => movie.data.id === id
   );
 
-  if (document.body.dataset.page === 'library') {
-    const index = keyFromLocalStorage.findIndex(
-      ({ data: { id } }) => movie.data.id === id
-    );
-    keyFromLocalStorage.splice(index, 1);
-    addLocalStorage(keyFromLocalStorage, `${key}`);
-    const button = document.querySelector(`button[data-add="${key}"]`);
-    button.textContent = 'remove';
-    return;
-  }
-
   if (!film) {
     keyFromLocalStorage.push(movie);
     addLocalStorage(keyFromLocalStorage, `${key}`);

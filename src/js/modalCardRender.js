@@ -74,8 +74,8 @@ function modalCardRender({
 
   // let markup = null;
 
-  if (document.body.dataset.page === 'main') {
-    markup = `
+  // if (document.body.dataset.page === 'main') {
+  markup = `
     <div class="wrapper">
       <div class="image">
         <img class='poster' src="${IMAGE_URL}${poster_path}" alt="${title}" />
@@ -130,66 +130,6 @@ function modalCardRender({
 
       </div>
   `;
-  }
-
-  if (document.body.dataset.page === 'library') {
-    markup = `
-    <div class="wrapper">
-      <div class="image">
-        <img class='poster' src="${IMAGE_URL}${poster_path}" alt="${title}" />
-      </div>
-
-      <div class="wrapper__text">
-        <h2 class="wrapper__title">${title}</h2>
-         <div class="wrapper__info">
-          <ul class="list">
-            <li class="list__item">
-             <p class="list__item-text">Vote / Votes</p>
-            </li>
-            <li class="list__item">
-             <p class="list__item-text">Original Title</p>
-            </li>
-            <li class="list__item">
-             <p class="list__item-text">Original Title</p>
-            </li>
-            <li class="list__item">
-             <p class="list__item-text">Genre</p>
-            </li>
-          </ul>
-          <ul class="list list__width">
-            <li class="list__item">
-             <p class="list__item-elem">
-               <span class="active">${vote_average}</span> / ${vote_count}
-             </p>
-            </li>
-            <li class="list__item">
-             <p class="list__item-elem">${popularity}</p>
-            </li>
-            <li class="list__item">
-             <p class="list__item-elem">${original_title}</p>
-            </li>
-            <li class="list__item">
-             <p class="list__item-elem">${movieGenres}</p>
-            </li>
-          </ul>
-     </div>
-
-     <p class="text">About</p>
-     <p class="paragraph">${overview}</p>
-     <div class="btns-box">
-     <button type="button" class="btns-box__btn is-active" data-add="watched">
-      Remove from watched
-     </button>
-     <button type="button" class="btns-box__btn" data-add="queue">
-        Remove from queue
-     </button>
-   </div>
-   </div>
-
-      </div>
-  `;
-  }
-  console.log(markup);
 
   modalRef.insertAdjacentHTML('beforeend', markup);
 }
