@@ -19,12 +19,12 @@ async function onQueueBtnClick() {
   try {
     const queue = JSON.parse(localStorage.getItem('queue'));
 
-    if (!queue) {
+    if (queue.length === 0) {
       // const emptyRef = document.querySelector('.empty-page');
       // emptyRef.innerHTML = '';
       checkLocalStorage();
       return;
-    } else if (queue) {
+    } else if (queue.length !== 0) {
       if (popcornImg.classList.contains('hide')) {
         renderLibraryCrads(queue);
         return;

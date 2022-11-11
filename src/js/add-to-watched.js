@@ -14,22 +14,23 @@ async function onWatchedBtnClick() {
   watchedBtn.classList.add('is-active');
   queueBtn.classList.remove('is-active');
   try {
-    const watched = localStorage.getItem('watched');
-    if (!watched) {
+    const watched = JSON.parse(localStorage.getItem('watched'));
+    if (watched.length === 0) {
+      console.log(123456);
       // emptyRef.innerHTML = '';
       checkLocalStorage();
       return;
     } else if (popcornImg.classList.contains('hide')) {
-      const parseWatched = JSON.parse(watched);
+      // const parseWatched = JSON.parse(watched);
       emptyRef.innerHTML = '';
-      renderLibraryCrads(parseWatched);
+      renderLibraryCrads(watched);
       return;
     }
     popcornImg.classList.toggle('hide');
-    const parseWatched = JSON.parse(watched);
+    // const parseWatched = JSON.parse(watched);
     emptyRef.innerHTML = '';
 
-    renderLibraryCrads(parseWatched);
+    renderLibraryCrads(watched);
     return;
   } catch (error) {
     console.log(error);
