@@ -74,8 +74,8 @@ function modalCardRender({
 
   // let markup = null;
 
-  if (document.body.dataset.page === 'main') {
-    markup = `
+  // if (document.body.dataset.page === 'main') {
+  markup = `
     <div class="wrapper">
       <div class="image">
         <img class='poster' src="${IMAGE_URL}${poster_path}" alt="${title}" />
@@ -185,10 +185,10 @@ function modalCardRender({
      </button>
    </div>
    </div>
-
       </div>
   `;
   }
+
 
   modalRef.insertAdjacentHTML('beforeend', markup);
 }
