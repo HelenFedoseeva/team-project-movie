@@ -15,7 +15,7 @@ export function onLibraryClickHandler() {
   //evt.preventDefault();
   watchedBtn.classList.add('is-active');
   try {
-    if (watched.length === 0) {
+    if (!watched || watched.length === 0) {
       checkLocalStorage();
       return;
     } else if (watched.length !== 0) {

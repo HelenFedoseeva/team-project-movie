@@ -15,8 +15,7 @@ async function onWatchedBtnClick() {
   queueBtn.classList.remove('is-active');
   try {
     const watched = JSON.parse(localStorage.getItem('watched'));
-    if (watched.length === 0) {
-      console.log(123456);
+    if (!watched || watched.length === 0) {
       // emptyRef.innerHTML = '';
       checkLocalStorage();
       return;

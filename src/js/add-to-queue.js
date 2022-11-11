@@ -19,7 +19,7 @@ async function onQueueBtnClick() {
   try {
     const queue = JSON.parse(localStorage.getItem('queue'));
 
-    if (queue.length === 0) {
+    if (!queue || queue.length === 0) {
       // const emptyRef = document.querySelector('.empty-page');
       // emptyRef.innerHTML = '';
       checkLocalStorage();

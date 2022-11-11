@@ -5,17 +5,21 @@ function checkLocalStorage() {
   const watched = JSON.parse(localStorage.getItem('watched'));
   const queue = JSON.parse(localStorage.getItem('queue'));
 
-  if (queue.length > 0 && watched.length === 0) {
-    imgRef.classList.remove('hide');
-    renderEmptyImage();
-    return;
-  } else if (watched.length > 0 && queue.length > 0) {
-    return;
-  } else if (queue > 0) {
-    return;
-  } else if (watched.length > 0 && queue.length === 0) {
-    imgRef.classList.remove('hide');
-    renderEmptyImage();
+  try {
+    if ((!queue || queue.length > 0) && (!watched || watched.length === 0)) {
+      imgRef.classList.remove('hide');
+      renderEmptyImage();
+      return;
+    } else if (watched.length > 0 && queue.length > 0) {
+      return;
+    } else if (queue > 0) {
+      return;
+    } else if (watched.length > 0 && queue.length === 0) {
+      imgRef.classList.remove('hide');
+      renderEmptyImage();
+    }
+  } catch (error) {
+    console.log(error);
   }
 }
 
@@ -31,17 +35,20 @@ export { checkLocalStorage, renderEmptyImage };
 function renderPopcornImg() {
   const watched = JSON.parse(localStorage.getItem('watched'));
   const queue = JSON.parse(localStorage.getItem('queue'));
-
-  if (watched.length === 0 && queue.length > 0) {
-    imgRef.classList.remove('hide');
-    renderEmptyImage();
-    return;
-  } else if (watched.length === 0 && queue.length === 0) {
-    imgRef.classList.remove('hide');
-    renderEmptyImage();
-    return;
-  } else if (watched.length > 0) {
-    return;
+  try {
+    if (!watched || (watched.length === 0 && (!queue || queue.length > 0))) {
+      imgRef.classList.remove('hide');
+      renderEmptyImage();
+      return;
+    } else if (watched.length === 0 && queue.length === 0) {
+      imgRef.classList.remove('hide');
+      renderEmptyImage();
+      return;
+    } else if (watched.length > 0) {
+      return;
+    }
+  } catch (error) {
+    console.log(error);
   }
 }
 
