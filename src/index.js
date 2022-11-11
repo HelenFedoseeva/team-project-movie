@@ -12,3 +12,4 @@ import './js/button-back';
 import './js/modernizr-custom';
 import './js/modal-footer';
 import './js/render-cards';
+import './js/switch-theme';
