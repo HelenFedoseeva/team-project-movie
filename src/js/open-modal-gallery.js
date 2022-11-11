@@ -32,7 +32,6 @@ async function openModal(movieId) {
   addListenerByBtns(movie);
   const btns = document.querySelector('.btns-box');
   btns.addEventListener('click', e => {
-    console.log('click');
     refreshGallery();
   });
 }
