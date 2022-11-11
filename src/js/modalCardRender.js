@@ -12,6 +12,7 @@ function modalCardRender({
   original_title,
   genres,
   overview,
+  id,
 }) {
   let movieGenres = genres.map(genre => genre.name).join(',');
   if (movieGenres === '') {
@@ -39,7 +40,7 @@ function modalCardRender({
            <p class="list__item-text">Genre</p>
           </li>
         </ul>
-        <ul class="list list__width">
+        <ul class="list list_width">
           <li class="list__item">
            <p class="list__item-elem">
              <span class="active">${vote_average}</span> / ${vote_count}
@@ -188,6 +189,7 @@ function modalCardRender({
       </div>
   `;
   }
+  console.log(markup);
 
   modalRef.insertAdjacentHTML('beforeend', markup);
 }
