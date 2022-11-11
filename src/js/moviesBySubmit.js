@@ -54,8 +54,8 @@ async function fetchMoviebyQueri(query) {
     current: currentPage,
     length: 20,
     size: 2,
-    prev: '🡠',
-    next: '🡢',
+    prev: '&lt',
+    next: '&gt',
     click: async function (e) {
       currentPage = e.current;
       await fetchMoviebyQueri(thisQuery);
