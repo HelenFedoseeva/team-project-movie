@@ -14,6 +14,6 @@ function switchToDarkTheme() {
   footerRef.classList.toggle('footer__dark');
   footerTextRef.classList.toggle('footer-text__dark');
   footerLinkRef.classList.toggle('footer-link__dark');
-  const paginationRef = document.querySelector('.pagination');
-  paginationRef.classList.toggle('footer-text__dark');
+  const paginationRef = document.querySelectorAll('.pagination_span');
+  paginationRef.forEach(elem => elem.classList.toggle('footer-text__dark'));
 }
