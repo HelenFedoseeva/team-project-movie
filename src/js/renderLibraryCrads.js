@@ -22,7 +22,9 @@ export function renderLibraryCrads(movies) {
     </li>`;
     })
     .join('');
-  galleryRef.innerHTML = markup;
+  if (document.body.dataset.page === 'library') {
+    galleryRef.innerHTML = markup;
+  }
 }
 
 function getGenres(genres) {
