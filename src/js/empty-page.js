@@ -12,7 +12,7 @@ function checkLocalStorage() {
       return;
     } else if (watched.length > 0 && queue.length > 0) {
       return;
-    } else if (queue > 0) {
+    } else if (queue.length > 0) {
       return;
     } else if (watched.length > 0 && queue.length === 0) {
       imgRef.classList.remove('hide');
@@ -28,15 +28,13 @@ function renderEmptyImage() {
   return (emptyPageRef.innerHTML = markup);
 }
 
-// checkLocalStorage();
-
 export { checkLocalStorage, renderEmptyImage };
 
 function renderPopcornImg() {
   const watched = JSON.parse(localStorage.getItem('watched'));
   const queue = JSON.parse(localStorage.getItem('queue'));
   try {
-    if (!watched || (watched.length === 0 && (!queue || queue.length > 0))) {
+    if ((!watched || watched.length === 0) && (!queue || queue.length > 0)) {
       imgRef.classList.remove('hide');
       renderEmptyImage();
       return;

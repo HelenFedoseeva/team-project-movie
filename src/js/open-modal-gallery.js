@@ -3,6 +3,7 @@ import { getMovie } from './movieById';
 import { addListenerByBtns } from './adding-watched-movies';
 
 import { renderLibraryCrads } from './renderLibraryCrads';
+import { checkLocalStorage } from './empty-page';
 
 const filmCardsRef = document.querySelector('.gallery');
 const backdropRef = document.querySelector('.backdrop');
@@ -57,6 +58,7 @@ async function openModal(movieId) {
 function onEscTap(e) {
   if (e.key === 'Escape') {
     closeModal();
+    checkLocalStorage();
   }
 }
 
@@ -66,6 +68,7 @@ function onClickCloseBtnOrOutside(e) {
     e.target.classList.value === 'backdrop'
   ) {
     closeModal();
+    checkLocalStorage();
   }
 }
 
