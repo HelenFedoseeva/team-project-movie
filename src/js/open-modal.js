@@ -56,8 +56,9 @@ function closeModal() {
   const wrapper = document.querySelector('.wrapper');
   wrapper.remove();
   const movies = JSON.parse(localStorage.getItem('watched'));
-  console.log(movies);
+  const movieQ = JSON.parse(localStorage.getItem('queue'));
   if (document.body.dataset.page === 'library') {
+    renderLibraryCrads(movieQ);
     renderLibraryCrads(movies);
   }
 }

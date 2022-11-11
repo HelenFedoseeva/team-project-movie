@@ -8,17 +8,20 @@ function addListenerByBtns(movie) {
   const btnW = document.querySelector('button[data-add="watched"]');
   const btnQ = document.querySelector('button[data-add="queue"]');
 
-  const watched = JSON.parse(localStorage.getItem('watched')).map(
-    ({ data }) => data.id
-  );
-  const queue = JSON.parse(localStorage.getItem('queue')).map(
-    ({ data }) => data.id
-  );
-  if (watched.includes(movie.data.id)) {
-    btnW.textContent = 'remove from watched';
+  const watched = JSON.parse(localStorage.getItem('watched'));
+  if (watched) {
+    const watch = watched.map(({ data }) => data.id);
+    if (watch.includes(movie.data.id)) {
+      btnW.textContent = 'remove from watched';
+    }
   }
-  if (queue.includes(movie.data.id)) {
-    btnQ.textContent = 'remove from queue';
+
+  const queue = JSON.parse(localStorage.getItem('queue'));
+  if (queue) {
+    const q = queue.map(({ data }) => data.id);
+    if (q.includes(movie.data.id)) {
+      btnQ.textContent = 'remove from queue';
+    }
   }
 }
 
