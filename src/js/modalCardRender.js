@@ -189,7 +189,6 @@ function modalCardRender({
       </div>
   `;
   }
-  console.log(markup);
 
   modalRef.insertAdjacentHTML('beforeend', markup);
 }
