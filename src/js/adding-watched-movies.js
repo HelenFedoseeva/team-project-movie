@@ -1,9 +1,9 @@
 import { doc } from '@firebase/firestore';
+import { renderLibraryCrads } from './renderLibraryCrads';
 
 export { addListenerByBtns };
 function addListenerByBtns(movie) {
   const btns = document.querySelector('.btns-box');
-  btns.addEventListener('click', onBtnsClick.bind(this, movie));
 
   const btnW = document.querySelector('button[data-add="watched"]');
   const btnQ = document.querySelector('button[data-add="queue"]');
@@ -24,16 +24,22 @@ function addListenerByBtns(movie) {
       btnQ.textContent = 'remove from queue';
     }
   }
+  btns.addEventListener('click', onBtnsClick.bind(this, movie));
 }
 
 function onBtnsClick(movie, event) {
-  console.log(event.target.textContent);
   if (event.target.textContent === 'remove from watched') {
     removeMovie(movie, 'watched');
+    const watched = JSON.parse(localStorage.getItem('watched'));
+
+    renderLibraryCrads(watched);
     return;
   }
   if (event.target.textContent === 'remove from queue') {
     removeMovie(movie, 'queue');
+    const queue = JSON.parse(localStorage.getItem('queue'));
+
+    renderLibraryCrads(queue);
     return;
   }
 
@@ -42,8 +48,9 @@ function onBtnsClick(movie, event) {
   }
 
   if (event.target.textContent === 'add to watched') {
-    console.log('add');
     checkLocalStorage(movie, 'watched');
+    const watched = JSON.parse(localStorage.getItem('watched'));
+    renderLibraryCrads(watched);
   }
 }
 
