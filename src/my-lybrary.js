@@ -8,3 +8,4 @@ import './js/on-myLibrary-click';
 import './js/modernizr-custom';
 import './js/modal-footer';
 import './js/open-modal-gallery';
+import './js/switch-theme-library';

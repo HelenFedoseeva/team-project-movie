@@ -11,6 +11,7 @@
   padding-top: 42px;
   display: flex;
   justify-content: space-between;
+ 
 }
 
 .header__main-conteiner {
@@ -117,6 +118,9 @@
       url('/src/images/background-mobile-1x.jpg');
     background-repeat: no-repeat;
     background-size: cover;
+
+  
+ 
   }
 .header__theme {
   display: flex;
